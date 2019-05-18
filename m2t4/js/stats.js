@@ -4,6 +4,7 @@ var DataDem = [];
 var DataInd = [];
 var diezPorciento = 0;
 var fullName="";
+var votesParty= 0;
 
 var estadisticas = {
   numberD: 0,
@@ -182,22 +183,24 @@ function imprimirTablaAttBot(datos) {
 }
 function imprimirTablaLoyTop(datos) {
 	for (i = 0; i < datos.length; i++) {
-		fullName = concatenarNombre(datos[i]);
+    fullName = concatenarNombre(datos[i]);
+    votesParty = parseInt(datos[i].total_votes * datos[i].votes_with_party_pct /100);
 		$("#table-top-L").append(
       '<tr>'
 			+ '<td>' + '<a href=' + datos[i].url + '>' + fullName + '</a>' + '</td>'
-			+ '<td>' + datos[i].total_votes + '</td>'
+			+ '<td>' + votesParty + '</td>'
 			+ '<td>' + datos[i].votes_with_party_pct + ' % </td>'
 			+ '</tr>');
 	}
 }
 function imprimirTablaLoyBot(datos) {
 	for (i = 0; i < datos.length; i++) {
-		fullName = concatenarNombre(datos[i]);
+    fullName = concatenarNombre(datos[i]);
+    votesParty = parseInt(datos[i].total_votes * datos[i].votes_with_party_pct /100);
 		$("#table-bottom-L").append(
       '<tr>'
 			+ '<td>' + '<a href=' + datos[i].url + '>' + fullName + '</a>' + '</td>'
-			+ '<td>' + datos[i].total_votes + '</td>'
+			+ '<td>' + votesParty + '</td>'
 			+ '<td>' + datos[i].votes_with_party_pct + ' % </td>'
 			+ '</tr>');
 	}
