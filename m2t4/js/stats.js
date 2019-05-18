@@ -71,6 +71,7 @@ function topMembersA(miembros) {// -- attendance filter top an bottom
   // console.log(JSON.stringify(seleccionados));
   return seleccionados;
 }
+
 function bottomMembersA(miembros) {
   let seleccionados = [];
   let ordenados = miembros.sort(compMVdes);
