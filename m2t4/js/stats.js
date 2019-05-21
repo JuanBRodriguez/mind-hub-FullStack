@@ -20,6 +20,16 @@ var estadisticas = {
   membersTopL: [],
   membersBottomL: []
 }
+
+const url = "https:/pokeapi.co/api/v2/pokemon/1/";
+
+fetch(url)
+.then(response => response.json())
+.then(data=> {
+  console.log(data);
+})
+.catch(err => console.log(err))
+
 //-----------separador de miembros por partido
 for (i = 0; i < DataJson.results[0].members.length; i++) {
   if (DataJson.results[0].members[i].party == 'R') {
@@ -31,6 +41,7 @@ for (i = 0; i < DataJson.results[0].members.length; i++) {
   }
 }
 // asignacion de valores al objeto estadisticas
+
 estadisticas.numberD = DataDem.length;
 estadisticas.numberR = DataRep.length;
 estadisticas.numberI = DataInd.length;
@@ -157,18 +168,40 @@ function compMVdes(a, b) {//  ordenar decendente missed votes %
   return 0;
 }
 
+function sumarVotos(miembros, number) {//-- porcentaje VWP
+  let suma = 0;
+  miembros.forEach(e => {
+    suma += e.votes_with_party_pct;
+  });
+  suma /= number;
+  suma = suma.toFixed(2);
+  return suma;
+}
+function concatenarNombre(informacion) {//-- Unir nombres para imprimir en tabla
+  let nombreComp = "";
+  if (informacion.middle_name != null) {
+    nombreComp = informacion.first_name + " "
+      + informacion.middle_name + " "
+      + informacion.last_name;
+  } else {
+    nombreComp = informacion.first_name + " "
+      + informacion.last_name;
+  }
+  return nombreComp;
+}
+
 // --------------escritura HTML
 function imprimirTablaAttTop(datos) {
-	for (i = 0; i < datos.length; i++) {
-		fullName = concatenarNombre(datos[i]);
+  for (i = 0; i < datos.length; i++) {
+    fullName = concatenarNombre(datos[i]);
 		$("#table-top-A").append(
       '<tr>'
 			+ '<td>' + '<a href=' + datos[i].url + '>' + fullName + '</a>' + '</td>'
 			+ '<td>' + datos[i].missed_votes + '</td>'
 			+ '<td>' + datos[i].missed_votes_pct + ' % </td>'
 			+ '</tr>');
-	}
-}
+    }
+  }
 function imprimirTablaAttBot(datos) {
 	for (i = 0; i < datos.length; i++) {
 		fullName = concatenarNombre(datos[i]);
@@ -229,26 +262,4 @@ function constructGlanceTable() {
       + '<td>' + estadisticas.VWPTotal + '%</td>'
     + '</tr>'
   );
-}
-
-function sumarVotos(miembros, number) {//-- porcentaje VWP
-  let suma = 0;
-  miembros.forEach(e => {
-    suma += e.votes_with_party_pct;
-  });
-  suma /= number;
-  suma = suma.toFixed(2);
-  return suma;
-}
-function concatenarNombre(informacion) {//-- Unir nombres para imprimir en tabla
-	let nombreComp = "";
-	if (informacion.middle_name != null) {
-		nombreComp = informacion.first_name + " "
-			+ informacion.middle_name + " "
-			+ informacion.last_name;
-	} else {
-		nombreComp = informacion.first_name + " "
-			+ informacion.last_name;
-	}
-	return nombreComp;
 }
