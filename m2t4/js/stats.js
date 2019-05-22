@@ -1,10 +1,10 @@
-var DataJson = JSON.parse(JSON.stringify(data));
+var DataJson = [];
 var DataRep = [];
 var DataDem = [];
 var DataInd = [];
 var diezPorciento = 0;
-var fullName="";
-var votesParty= 0;
+var fullName = "";
+var votesParty = 0;
 
 var estadisticas = {
   numberD: 0,
@@ -20,15 +20,30 @@ var estadisticas = {
   membersTopL: [],
   membersBottomL: []
 }
+var pathname = window.location.pathname;
+var url = "https:/pokeapi.co/api/v2/pokemon/1/";
 
-const url = "https:/pokeapi.co/api/v2/pokemon/1/";
+if (pathname.includes('/senate')) {
+  url = "https://api.propublica.org/congress/v1/115/senate/members.json"
+} else if (pathname.includes('/house')) {
+  url = "https://api.propublica.org/congress/v1/115/house/members.json"
+}
+console.log(url);
 
-fetch(url)
-.then(response => response.json())
-.then(data=> {
-  console.log(data);
+url = "https:/pokeapi.co/api/v2/pokemon/1/";
+const pw = "vZNfxCfRP7nqVY41tNk6DG39jr7TdL8gkojxAkI8";
+
+fetch(url, {
+  method: 'GET',
+  headers: new Headers({
+    'X-API-Key': pw
+  })
 })
-.catch(err => console.log(err))
+  .then(response => response.json())
+  .then(data => {
+    DataJson = data;
+  })
+  .catch(err => console.log(err))
 
 //-----------separador de miembros por partido
 for (i = 0; i < DataJson.results[0].members.length; i++) {
@@ -71,7 +86,7 @@ imprimirTablaLoyTop(estadisticas.membersTopL);
 function topMembersA(miembros) {// -- attendance filter top an bottom
   let seleccionados = [];
   let ordenados = miembros.sort(compMVas);
-  for (let i = 0, j=0; j < diezPorciento; i++, j++) {
+  for (let i = 0, j = 0; j < diezPorciento; i++ , j++) {
     if (ordenados[i].missed_votes_pct == ordenados[diezPorciento].missed_votes_pct) {
       j--;
     }
@@ -87,7 +102,7 @@ function topMembersA(miembros) {// -- attendance filter top an bottom
 function bottomMembersA(miembros) {
   let seleccionados = [];
   let ordenados = miembros.sort(compMVdes);
-  for (let i = 0, j=0; j < diezPorciento; i++, j++) {
+  for (let i = 0, j = 0; j < diezPorciento; i++ , j++) {
     if (ordenados[i].missed_votes_pct == ordenados[diezPorciento].missed_votes_pct) {
       j--;
     }
@@ -102,7 +117,7 @@ function bottomMembersA(miembros) {
 function topMembersL(miembros) {// --------Loyalty
   let seleccionados = [];
   let ordenados = miembros.sort(compVPdes);
-  for (let i = 0, j=0; j < diezPorciento; i++, j++) {
+  for (let i = 0, j = 0; j < diezPorciento; i++ , j++) {
     if (ordenados[i].votes_with_party_pct == ordenados[diezPorciento].votes_with_party_pct) {
       j--;
     }
@@ -117,7 +132,7 @@ function topMembersL(miembros) {// --------Loyalty
 function bottomMembersL(miembros) {
   let seleccionados = [];
   let ordenados = miembros.sort(compVPas);
-  for (let i = 0, j=0; j < diezPorciento; i++, j++) {
+  for (let i = 0, j = 0; j < diezPorciento; i++ , j++) {
     if (ordenados[i].votes_with_party_pct == ordenados[diezPorciento].votes_with_party_pct) {
       j--;
     }
@@ -194,72 +209,72 @@ function concatenarNombre(informacion) {//-- Unir nombres para imprimir en tabla
 function imprimirTablaAttTop(datos) {
   for (i = 0; i < datos.length; i++) {
     fullName = concatenarNombre(datos[i]);
-		$("#table-top-A").append(
+    $("#table-top-A").append(
       '<tr>'
-			+ '<td>' + '<a href=' + datos[i].url + '>' + fullName + '</a>' + '</td>'
-			+ '<td>' + datos[i].missed_votes + '</td>'
-			+ '<td>' + datos[i].missed_votes_pct + ' % </td>'
-			+ '</tr>');
-    }
+      + '<td>' + '<a href=' + datos[i].url + '>' + fullName + '</a>' + '</td>'
+      + '<td>' + datos[i].missed_votes + '</td>'
+      + '<td>' + datos[i].missed_votes_pct + ' % </td>'
+      + '</tr>');
   }
+}
 function imprimirTablaAttBot(datos) {
-	for (i = 0; i < datos.length; i++) {
-		fullName = concatenarNombre(datos[i]);
-		$("#table-bottom-A").append(
+  for (i = 0; i < datos.length; i++) {
+    fullName = concatenarNombre(datos[i]);
+    $("#table-bottom-A").append(
       '<tr>'
-			+ '<td>' + '<a href=' + datos[i].url + '>' + fullName + '</a>' + '</td>'
-			+ '<td>' + datos[i].missed_votes + '</td>'
-			+ '<td>' + datos[i].missed_votes_pct + ' % </td>'
-			+ '</tr>');
+      + '<td>' + '<a href=' + datos[i].url + '>' + fullName + '</a>' + '</td>'
+      + '<td>' + datos[i].missed_votes + '</td>'
+      + '<td>' + datos[i].missed_votes_pct + ' % </td>'
+      + '</tr>');
   }
   //console.log(datos);
 }
 function imprimirTablaLoyTop(datos) {
-	for (i = 0; i < datos.length; i++) {
+  for (i = 0; i < datos.length; i++) {
     fullName = concatenarNombre(datos[i]);
-    votesParty = parseInt(datos[i].total_votes * datos[i].votes_with_party_pct /100);
-		$("#table-top-L").append(
+    votesParty = parseInt(datos[i].total_votes * datos[i].votes_with_party_pct / 100);
+    $("#table-top-L").append(
       '<tr>'
-			+ '<td>' + '<a href=' + datos[i].url + '>' + fullName + '</a>' + '</td>'
-			+ '<td>' + votesParty + '</td>'
-			+ '<td>' + datos[i].votes_with_party_pct + ' % </td>'
-			+ '</tr>');
-	}
+      + '<td>' + '<a href=' + datos[i].url + '>' + fullName + '</a>' + '</td>'
+      + '<td>' + votesParty + '</td>'
+      + '<td>' + datos[i].votes_with_party_pct + ' % </td>'
+      + '</tr>');
+  }
 }
 function imprimirTablaLoyBot(datos) {
-	for (i = 0; i < datos.length; i++) {
+  for (i = 0; i < datos.length; i++) {
     fullName = concatenarNombre(datos[i]);
-    votesParty = parseInt(datos[i].total_votes * datos[i].votes_with_party_pct /100);
-		$("#table-bottom-L").append(
+    votesParty = parseInt(datos[i].total_votes * datos[i].votes_with_party_pct / 100);
+    $("#table-bottom-L").append(
       '<tr>'
-			+ '<td>' + '<a href=' + datos[i].url + '>' + fullName + '</a>' + '</td>'
-			+ '<td>' + votesParty + '</td>'
-			+ '<td>' + datos[i].votes_with_party_pct + ' % </td>'
-			+ '</tr>');
-	}
+      + '<td>' + '<a href=' + datos[i].url + '>' + fullName + '</a>' + '</td>'
+      + '<td>' + votesParty + '</td>'
+      + '<td>' + datos[i].votes_with_party_pct + ' % </td>'
+      + '</tr>');
+  }
 }
 function constructGlanceTable() {
   if (isNaN(estadisticas.VWPI)) {
-    estadisticas.VWPI=0;
+    estadisticas.VWPI = 0;
   }
   $("#table-glance").append(
     '<tr>'
-      + '<td>Democrat</td>'
-      + '<td>' + estadisticas.numberD + '</td>'
-      + '<td>' + estadisticas.VWPD + '%</td>'
+    + '<td>Democrat</td>'
+    + '<td>' + estadisticas.numberD + '</td>'
+    + '<td>' + estadisticas.VWPD + '%</td>'
     + '</tr>'
     + '<tr>'
-      + '<td>Republican</td>'
-      + '<td>' + estadisticas.numberR + '</td>'
-      + '<td>' + estadisticas.VWPR + '%</td>'
+    + '<td>Republican</td>'
+    + '<td>' + estadisticas.numberR + '</td>'
+    + '<td>' + estadisticas.VWPR + '%</td>'
     + '</tr>'
-      + '<td>Independent</td>'
-      + '<td>' + estadisticas.numberI + '</td>'
-      + '<td>' + estadisticas.VWPI + '%</td>'
+    + '<td>Independent</td>'
+    + '<td>' + estadisticas.numberI + '</td>'
+    + '<td>' + estadisticas.VWPI + '%</td>'
     + '</tr>'
-      + '<td>Total</td>'
-      + '<td>' + estadisticas.numberTotal + '</td>'
-      + '<td>' + estadisticas.VWPTotal + '%</td>'
+    + '<td>Total</td>'
+    + '<td>' + estadisticas.numberTotal + '</td>'
+    + '<td>' + estadisticas.VWPTotal + '%</td>'
     + '</tr>'
   );
 }
