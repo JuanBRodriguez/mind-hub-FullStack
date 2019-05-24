@@ -1,4 +1,4 @@
-var DataJson = [];
+var DataJson = JSON.parse(JSON.stringify(data));
 var DataRep = [];
 var DataDem = [];
 var DataInd = [];
@@ -20,30 +20,7 @@ var estadisticas = {
   membersTopL: [],
   membersBottomL: []
 }
-var pathname = window.location.pathname;
-var url = "https:/pokeapi.co/api/v2/pokemon/1/";
 
-if (pathname.includes('/senate')) {
-  url = "https://api.propublica.org/congress/v1/115/senate/members.json"
-} else if (pathname.includes('/house')) {
-  url = "https://api.propublica.org/congress/v1/115/house/members.json"
-}
-console.log(url);
-
-url = "https:/pokeapi.co/api/v2/pokemon/1/";
-const pw = "vZNfxCfRP7nqVY41tNk6DG39jr7TdL8gkojxAkI8";
-
-fetch(url, {
-  method: 'GET',
-  headers: new Headers({
-    'X-API-Key': pw
-  })
-})
-  .then(response => response.json())
-  .then(data => {
-    DataJson = data;
-  })
-  .catch(err => console.log(err))
 
 //-----------separador de miembros por partido
 for (i = 0; i < DataJson.results[0].members.length; i++) {
@@ -87,15 +64,11 @@ function topMembersA(miembros) {// -- attendance filter top an bottom
   let seleccionados = [];
   let ordenados = miembros.sort(compMVas);
   for (let i = 0, j = 0; j < diezPorciento; i++ , j++) {
-    if (ordenados[i].missed_votes_pct == ordenados[diezPorciento].missed_votes_pct) {
+    if (ordenados[j].missed_votes_pct == ordenados[i].missed_votes_pct) {
       j--;
     }
     seleccionados.push(ordenados[i]);
-    // console.log(JSON.stringify(ordenados[i].missed_votes_pct));
   }
-  // console.log(diezPorciento + " son la cantidad de seleccionados");
-  // console.log(seleccionados.length);
-  // console.log(JSON.stringify(seleccionados));
   return seleccionados;
 }
 
@@ -107,11 +80,7 @@ function bottomMembersA(miembros) {
       j--;
     }
     seleccionados.push(ordenados[i]);
-    // console.log(JSON.stringify(ordenados[i].missed_votes_pct));
   }
-  // console.log(diezPorciento + " son la cantidad de seleccionados");
-  // console.log(seleccionados.length);
-  // console.log(JSON.stringify(seleccionados));
   return seleccionados;
 }
 function topMembersL(miembros) {// --------Loyalty
@@ -122,11 +91,7 @@ function topMembersL(miembros) {// --------Loyalty
       j--;
     }
     seleccionados.push(ordenados[i]);
-    //  console.log(JSON.stringify(ordenados[i].votes_with_party_pct));
   }
-  // console.log(diezPorciento + " son la cantidad de seleccionados");
-  // console.log(seleccionados.length);
-  // console.log(JSON.stringify(seleccionados));
   return seleccionados;
 }
 function bottomMembersL(miembros) {
@@ -137,11 +102,7 @@ function bottomMembersL(miembros) {
       j--;
     }
     seleccionados.push(ordenados[i]);
-    // console.log(JSON.stringify(ordenados[i].votes_with_party_pct));
   }
-  // console.log(diezPorciento + " son la cantidad de seleccionados");
-  // console.log(seleccionados.length);
-  // console.log(JSON.stringify(seleccionados));
   return seleccionados;
 }
 

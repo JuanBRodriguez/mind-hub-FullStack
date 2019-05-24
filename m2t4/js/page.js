@@ -1,7 +1,8 @@
-var DataJson = JSON.parse(JSON.stringify(data));
+var DataJson = datos;
 var fullName = "";
 var filtros = ["D", "R", "I", "All"];
 var DataAprobada=[];
+
 $("#table-data").append('<thead class="bg-light">'
 	+ '<tr>'
 	+ '<th>Name</th>'
