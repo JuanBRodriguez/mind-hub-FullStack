@@ -82,7 +82,7 @@
         </div>
     </nav>
     <!------------------------- Contenido------------------------------>
-    <div class="">
+    <div id="app">
         <div class="row">
             <!-- party loyalty -->
             <div class="col text-justify">
@@ -106,8 +106,12 @@
                             <th>% Voted with Prty</th>
                         </tr>
                     </thead>
-                    <tbody id="table-glance">
-                    </tbody>
+                    <tbody>
+                        <tr v-for="data of general ">
+                            <td>{{data.partido}}</td>
+                            <td>{{data.cantidad}}</td>
+                            <td>{{data.VWP}}</td>
+                        </tr>
                 </table>
             </div>
         </div>
@@ -123,7 +127,13 @@
                             <th>% Party Votes</th>
                         </tr>
                     </thead>
-                    <tbody id="table-bottom-L">
+                    <!-- vue -->
+                    <tbody>
+                        <tr v-for="data of topLoy ">
+                            <td><a :href="data.nUrl"> {{data.fullName}} </a></td>
+                            <td>{{data.votesParty}}</td>
+                            <td>{{data.VWPP}} %</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -138,7 +148,13 @@
                             <th>% Party Votes</th>
                         </tr>
                     </thead>
-                    <tbody id="table-top-L">
+                    <!-- vue -->
+                    <tbody>
+                        <tr v-for="data of botLoy ">
+                            <td><a :href="data.nUrl"> {{data.fullName}} </a></td>
+                            <td>{{data.votesParty}}</td>
+                            <td>{{data.VWPP}} %</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -157,8 +173,8 @@
 
     <!-- Scrips personales -->
     <script src="js/pro-congress-113-senate.js">    </script>
-    <script src="js/stats.js">    </script>
-
+    <!-- <script src="js/stats.js">    </script> -->
+    <script src="js/convue.js"></script>
     <!-- scripts default -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
