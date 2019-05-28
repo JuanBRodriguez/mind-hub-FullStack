@@ -32,30 +32,19 @@ var app = new Vue({
             }
         ],
 
-        topLoy: [{
+        top: [{
             nUrl: "https://adams.house.gov",
             fullName: "top",
-            votesParty: 0,
-            VWPP: 0
+            primero: 0,
+            segundo: 0
         }, ],
-        botLoy: [{
+        bot: [{
             nUrl: "https://adams.house.gov",
             fullName: "bot",
-            votesParty: 0,
-            VWPP: 0
-        }, ],
-        topAtt: [{
-            nUrl: "https://adams.house.gov",
-            fullName: "atop",
-            missedVotes: 0,
-            MVP: 0
-        }, ],
-        botAtt: [{
-            nUrl: "https://adams.house.gov",
-            fullName: "asbot",
-            missedVotes: 0,
-            MVP: 0
+            primero: 0,
+            segundo: 0
         }, ]
+        
     },
     methods: {
         usandoFetch() { //metodo para llamar al fetch que pide el JSON a la API.
@@ -73,24 +62,35 @@ var app = new Vue({
         },
         verPag() { //verifica el url de la pagina actual y segun este mismo elige que tipo de JSON llamar.
             if (this.pathname.includes('/senate')) {
-                this.page = "senate";
                 return this.url = "https://api.propublica.org/congress/v1/113/senate/members.json";
             } else if (this.pathname.includes('/house')) {
-                this.page = "house";
                 return this.url = "https://api.propublica.org/congress/v1/113/house/members.json";
+            }
+            if (this.pathname.includes('attendance')) {
+                return this.page = "att";
+            } else if (this.pathname.includes('loyalty')) {
+                return this.page = "loy";
             }
         },
         calculosGenerales() {
+            let demo=[];
+            let inde=[];
+            let repu=[];
             for (i = 0; i < this.datos.length; i++) {
+                console.log(this.datos);
                 if (this.datos[i].party == 'R') {
-                    this.rep.push(this.datos[i]);
+                    repu.push(this.datos[i]);
                 } else if (this.datos[i].party == 'D') {
-                    this.dem.push(this.datos[i]);
+                    demo.push(this.datos[i]);
                 } else if (this.datos[i].party == 'I') {
-                    this.ind.push(this.datos[i]);
+                    inde.push(this.datos[i]);
                 }
             }
-            console.log(this.dem[0]);
+            this.dem = demo;
+            this.ind = inde;
+            this.rep = repu;
+            
+            console.log(this.dem);
         },
     },
     computed: {

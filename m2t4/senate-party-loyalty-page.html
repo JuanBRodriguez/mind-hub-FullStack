@@ -116,27 +116,6 @@
             </div>
         </div>
         <div class="row">
-            <!-- Bottom -->
-            <div class="col">
-                <h2>Least Loyal (Bottom 10% of Party)</h2>
-                <table class="table table-bordered table-hover">
-                    <thead class="bg-light">
-                        <tr>
-                            <th>Name</th>
-                            <th>Number Party Votes</th>
-                            <th>% Party Votes</th>
-                        </tr>
-                    </thead>
-                    <!-- vue -->
-                    <tbody>
-                        <tr v-for="data of topLoy ">
-                            <td><a :href="data.nUrl"> {{data.fullName}} </a></td>
-                            <td>{{data.votesParty}}</td>
-                            <td>{{data.VWPP}} %</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
             <!-- Top -->
             <div class="col">
                 <h2>Most Loyal (Top 10% of Party)</h2>
@@ -150,10 +129,31 @@
                     </thead>
                     <!-- vue -->
                     <tbody>
-                        <tr v-for="data of botLoy ">
+                        <tr v-for="data of top ">
                             <td><a :href="data.nUrl"> {{data.fullName}} </a></td>
-                            <td>{{data.votesParty}}</td>
-                            <td>{{data.VWPP}} %</td>
+                            <td>{{data.primer}}</td>
+                            <td>{{data.segundo}} %</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Bottom -->
+            <div class="col">
+                <h2>Least Loyal (Bottom 10% of Party)</h2>
+                <table class="table table-bordered table-hover">
+                    <thead class="bg-light">
+                        <tr>
+                            <th>Name</th>
+                            <th>Number Party Votes</th>
+                            <th>% Party Votes</th>
+                        </tr>
+                    </thead>
+                    <!-- vue -->
+                    <tbody>
+                        <tr v-for="data of bot">
+                            <td><a :href="data.nUrl"> {{data.fullName}} </a></td>
+                            <td>{{data.primer}}</td>
+                            <td>{{data.segundo}} %</td>
                         </tr>
                     </tbody>
                 </table>
