@@ -38,7 +38,6 @@ var data = {
           "dw_nominate": -0.468,
           "ideal_point": null,
           "seniority": "2",
-
           "total_votes": 48,
           "missed_votes": 2,
           "total_present": 0,
