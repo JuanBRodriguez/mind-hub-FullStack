@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+	<!-- VUE development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<title>House</title>
 	<!-- JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -80,7 +82,7 @@
 		</div>
 	</nav>
 	<!----------------------------------Table container------------------------------------- -->
-	<div class="text-justify">
+	<div class="text-justify" id="app">
 		<h2>Congressmen</h2>
 		<p>The major power of the House is to pass federal legislation that affects the entire country, although its
 			bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law
@@ -121,7 +123,7 @@
 						<h6>State:</h6>
 					</div>
 					<div class="col-2">
-						<select id="select-states" class="form-control">
+						<select id="select-states" class="form-control" v-for>
 							<option value="All">All States</option>
 							<option value="AL">Alabama</option>
 							<option value="AK">Alaska</option>
@@ -199,7 +201,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   
 	<!-- Scrips personales -->
-	<script src="js/pro-congress-113-senate.js"></script>
+	<script src="js/convue.js"></script>
 	<script src="js/page.js"></script>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

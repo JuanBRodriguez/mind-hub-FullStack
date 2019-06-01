@@ -1,4 +1,4 @@
-var DataJson = datos;
+var DataJson= {};
 var fullName = "";
 var filtros = ["D", "R", "I", "All"];
 var DataAprobada=[];

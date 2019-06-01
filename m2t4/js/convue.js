@@ -6,7 +6,6 @@ var app = new Vue({
         pw: "vZNfxCfRP7nqVY41tNk6DG39jr7TdL8gkojxAkI8",
         primero: "",
         segundo: "",
-
         general: [{
                 partido: "Democratas",
                 cantidad: 0,
@@ -28,10 +27,8 @@ var app = new Vue({
                 VWP: 0
             }
         ],
-
         top: [],
         bot: []
-
     },
     methods: {
         usandoFetch() { //metodo para llamar al fetch que pide el JSON a la API.
@@ -42,10 +39,10 @@ var app = new Vue({
                     })
                 }).then(response => response.json())
                 .then(data => {
+                    DataJson = data;
                     this.calculosGenerales(data.results[0].members);
                     this.valoresBot(data.results[0].members, this.primero, this.segundo);
-                    this.valoresTop(data.results[0].members, this.primero, this.segundo)
-                    //console.log(this.datos);
+                    this.valoresTop(data.results[0].members, this.primero, this.segundo);
                 })
                 .catch(err => console.log(err))
         },
@@ -71,7 +68,6 @@ var app = new Vue({
             let repu = [];
             let VWPR = 0;
             let VWPT = 0;
-
             for (let i = 0; i < miembros.length; i++) {
                 if (miembros[i].party == 'R') {
                     repu.push(miembros[i]);
@@ -103,6 +99,9 @@ var app = new Vue({
             this.general[1].VWP = VWPR;
             this.general[2].VWP = VWPI;
             this.general[3].VWP = VWPT;
+            if(isNaN(this.general[2].VWP)){
+                this.general[2].VWP =0;
+            }
         },
         valoresBot(miembros, campo1, campo2) {
             let diez = [];
@@ -179,5 +178,4 @@ var app = new Vue({
         this.verPag();
         this.usandoFetch();
     }
-
 })
