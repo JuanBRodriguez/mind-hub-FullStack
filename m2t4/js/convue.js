@@ -3,12 +3,11 @@ var app = new Vue({
     data: {
         pathname: window.location.pathname,
         url: "",
-        datos: [],
         pw: "vZNfxCfRP7nqVY41tNk6DG39jr7TdL8gkojxAkI8",
-        campo: "",
+        primero: "",
+        segundo: "",
 
-        general: [
-            {
+        general: [{
                 partido: "Democratas",
                 cantidad: 0,
                 VWP: 0
@@ -30,33 +29,22 @@ var app = new Vue({
             }
         ],
 
-        top: [{
-            nUrl: "https://adams.house.gov",
-            fullName: "top",
-            primero: 0,
-            segundo: 0
-        },],
-        bot: [{
-            nUrl: "https://adams.house.gov",
-            fullName: "bot",
-            primero: 0,
-            segundo: 0
-        },]
+        top: [],
+        bot: []
 
     },
     methods: {
         usandoFetch() { //metodo para llamar al fetch que pide el JSON a la API.
             fetch(this.url, {
-                method: 'GET',
-                headers: new Headers({
-                    'X-API-Key': this.pw
-                })
-            }).then(response => response.json())
+                    method: 'GET',
+                    headers: new Headers({
+                        'X-API-Key': this.pw
+                    })
+                }).then(response => response.json())
                 .then(data => {
-                    this.datos = data.results[0].members;
                     this.calculosGenerales(data.results[0].members);
-
-                    this.valoresBot(campo, data.results[0].members)
+                    this.valoresBot(data.results[0].members, this.primero, this.segundo);
+                    this.valoresTop(data.results[0].members, this.primero, this.segundo)
                     //console.log(this.datos);
                 })
                 .catch(err => console.log(err))
@@ -68,9 +56,11 @@ var app = new Vue({
                 this.url = "https://api.propublica.org/congress/v1/113/house/members.json";
             }
             if (this.pathname.includes('attendance')) {
-                this.campo = "missed_votes_pct";
+                this.primero = "missed_votes";
+                this.segundo = "missed_votes_pct";
             } else if (this.pathname.includes('loyalty')) {
-                this.campo = "votes_with_party_pct";
+                this.primero = "total_votes";
+                this.segundo = "votes_with_party_pct";
             }
         },
         calculosGenerales(miembros) {
@@ -114,32 +104,77 @@ var app = new Vue({
             this.general[2].VWP = VWPI;
             this.general[3].VWP = VWPT;
         },
-        valoresBot(campo) {
-            
+        valoresBot(miembros, campo1, campo2) {
+            let diez = [];
+            let orden = [];
+            let incompleto = true;
+            orden = miembros.sort(function (a, b) {
+                return b[campo2] - a[campo2];
+            });
+            diez = orden.filter((miembro, indice) => indice / miembros.length * 100 < 10);
+            console.log(diez);
+            while (incompleto) {
+                if (diez[diez.length - 1] == orden[diez.length]) {
+                    diez.push(orden[diez.length]);
+                } else {
+                    incompleto = false;
+                }
+            }
+            for (let i = 0; i < diez.length; i++) {
+                let objeto = [{
+                    nUrl: "",
+                    fullName: "",
+                    primero: 0,
+                    segundo: 0
+                }];
+                objeto.nUrl = diez[i].url;
+                objeto.fullName = this.concatenarNombre(diez[i]);
+                objeto.primero = diez[i][campo1];
+                objeto.segundo = diez[i][campo2];
+                this.bot.push(objeto);
+            }
         },
-        concatenarNombre(informacion) {//-- Unir nombres para imprimir en tabla
+        valoresTop(miembros, campo1, campo2) {
+            let diez = [];
+            let orden = [];
+            let incompleto = true;
+            orden = miembros.sort(function (a, b) {
+                return a[campo2] - b[campo2];
+            });
+            diez = orden.filter((miembro, indice) => indice / miembros.length * 100 < 10);
+            console.log(diez);
+            while (incompleto) {
+                if (diez[diez.length - 1] == orden[diez.length]) {
+                    diez.push(orden[diez.length]);
+                } else {
+                    incompleto = false;
+                }
+            }
+            for (let i = 0; i < diez.length; i++) {
+                let objeto = [{
+                    nUrl: "",
+                    fullName: "",
+                    primero: 0,
+                    segundo: 0
+                }];
+                objeto.nUrl = diez[i].url;
+                objeto.fullName = this.concatenarNombre(diez[i]);
+                objeto.primero = diez[i][campo1];
+                objeto.segundo = diez[i][campo2];
+                this.top.push(objeto);
+            }
+        },
+        concatenarNombre(informacion) { //-- Unir nombres para imprimir en tabla
             let nombreComp = "";
             if (informacion.middle_name != null) {
-                nombreComp = informacion.first_name + " "
-                    + informacion.middle_name + " "
-                    + informacion.last_name;
+                nombreComp = informacion.first_name + " " + informacion.middle_name + " " + informacion.last_name;
             } else {
-                nombreComp = informacion.first_name + " "
-                    + informacion.last_name;
+                nombreComp = informacion.first_name + " " + informacion.last_name;
             }
             return nombreComp;
         },
-        ascendente(){
-            return a - b;
-        },
-        decendente(){
-            return b - a;
-        },
-
     },
-    computed: {
-
-    },
+    computed: {},
     created() {
         this.verPag();
         this.usandoFetch();
