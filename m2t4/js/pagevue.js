@@ -4,8 +4,8 @@ var app = new Vue({
         pathname: window.location.pathname,
         url: "",
         pw: "vZNfxCfRP7nqVY41tNk6DG39jr7TdL8gkojxAkI8",
-        filtros:[],
-        estado:"",
+        filtros: ["", "",""],
+        estado: "All",
         dataJson: [],
         aprobados: [],
 
@@ -240,13 +240,14 @@ var app = new Vue({
     methods: {
         usandoFetch() { //metodo para llamar al fetch que pide el JSON a la API.
             fetch(this.url, {
-                    method: 'GET',
-                    headers: new Headers({
-                        'X-API-Key': this.pw
-                    })
-                }).then(response => response.json())
+                method: 'GET',
+                headers: new Headers({
+                    'X-API-Key': this.pw
+                })
+            }).then(response => response.json())
                 .then(data => {
                     this.dataJson = data.results[0].members;
+                    this.seleccionarElegidos();
                 })
                 .catch(err => console.log(err))
         },
@@ -266,10 +267,14 @@ var app = new Vue({
             }
             return nombreComp;
         },
-    },
-    computed: {
         seleccionarElegidos() {
+            this.filtros[0] = $('input[type=checkbox][name=Democrat]:checked').val();
+            this.filtros[1] = $('input[type=checkbox][name=Republican]:checked').val();
+            this.filtros[2] = $('input[type=checkbox][name=Independent]:checked').val();
+            this.estado = $('select#select-states option:checked').val();
             let datosAprob = [];
+            console.log(this.filtros);
+            console.log(this.estado);
             for (let i = 0; i < this.dataJson.length; i++) {
                 if (this.estado == "All") {
                     for (let j = 0; j < 3; j++) {
@@ -315,6 +320,8 @@ var app = new Vue({
             }
             return this.aprobados = datosAprob;
         },
+    },
+    computed: {
     },
     created() {
         this.verPag();
