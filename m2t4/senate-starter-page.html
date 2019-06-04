@@ -3,8 +3,8 @@
 
 <head>
 	<!-- VUE development version, includes helpful console warnings -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<title>Senate</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- JQuery -->
@@ -14,7 +14,7 @@
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!-- Bootstrap CSS archivo -->
 	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-
+	<title>Senate</title>
 </head>
 
 <body class="container-fluid card">
@@ -112,25 +112,25 @@
 					</div>
 					<div class="col-2 pt-2">
 						<label>
-							<input type="checkbox" name="Democrat" value="D" checked>Democrat
+							<input type="checkbox" name="Democrat" value="D" checked v-model="filtros" @click="seleccionarElegidos" >Democrat
 						</label>
 					</div>
 					<div class="col-2 pt-2">
 						<label>
-							<input type="checkbox" name="Republican" value="R" checked>Republican
+							<input type="checkbox" name="Republican" value="R" v-model="filtros" @click="seleccionarElegidos"  checked>Republican
 						</label>
 					</div>
 					<div class="col-2 pt-2">
 						<label>
-							<input type="checkbox" name="Independent" value="I" checked>Independent
+							<input type="checkbox" name="Independent" value="I" v-model="filtros" @click="seleccionarElegidos"  checked>Independent
 						</label>
 					</div>
 					<div class="col-1 pt-2">
 						<h6>States:</h6>
 					</div>
 					<div class="col-2">
-						<select id="select-states" class="form-control" v-for="est of estados">
-							{{est}}
+						<select id="select-states" class="form-control" v-model="estado" @click="seleccionarElegidos">
+							<option v-for="est of estados" :value="est.value">{{est.name}}</option>
 						</select>
 					</div>
 				</div>
@@ -138,6 +138,24 @@
 		</section>
 
 		<table id="table-data" class="table mt-2 table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Party</th>
+					<th>State</th>
+					<th>Years in office</th>
+					<th>%Votes w/party</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="ap of aprobados">
+					<th><a :href="ap.url"> {{ap.fullName}} </a></th>
+					<th>{{ap.party}}</th>
+					<th>{{ap.state}}</th>
+					<th>{{ap.seniority}}</th>
+					<th>{{ap.votes_with_party_pct}}</th>
+				</tr>
+			</tbody>
 		</table>
 
 	</div>
@@ -151,7 +169,7 @@
 	<!-- --------------------------------SCRIPTS------------------------------------- -->
 	<!-- VUE development version, includes helpful console warnings -->
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  
+
 	<!-- Scrips personales -->
 	<script src="js/pagevue.js">	</script>
 

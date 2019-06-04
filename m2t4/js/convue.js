@@ -39,7 +39,6 @@ var app = new Vue({
                     })
                 }).then(response => response.json())
                 .then(data => {
-                    DataJson = data;
                     this.calculosGenerales(data.results[0].members);
                     this.valoresBot(data.results[0].members, this.primero, this.segundo);
                     this.valoresTop(data.results[0].members, this.primero, this.segundo);
