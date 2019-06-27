@@ -14,22 +14,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
-<body class="container-fluid">
-  <div >
-    <div id="pageheader">
-      <h1>About</h1>
+<body class="">
+  <div class="container-fluid">
+    <div class="text-center">
+      <h3>Upcoming Events</h3>
     </div>
+    <div class="d-flex flex-row justify-content-center hidden-xs-down">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner text-center">
+          <div class="carousel-item active">
+            <img src="/NYSL/styles/images/design2_image1.jpg" class="img-fluid d-block w-10" alt="2">
+          </div>
+          <div class="carousel-item text-center">
+            <img src="/NYSL/styles/images/design1_image1.jpg" class="img-fluid d-block w-10" alt="1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-toggleable-md">
+      <a class="navbar-brand" href="index.html">
+        <img src="/NYSL/styles/images/nysl_logo.png" width="60" height="60" alt="logo NYSL">
+      </a>
+      <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#dropnav"
+        aria-controls="dropnav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div id="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>About NYSL</li>
-        <li><a href="registration.html">Registration</a></li>
-        <li><a href="info.html">Game Information</a></li>
-        <li><a href="rules.html">Rules</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+      <div class="collapse navbar-collapse" id="dropnav">
+        <div class="navbar-nav text-center">
+          <a class="nav-item nav-link active" href="index.html">Home</a>
+          <a class="nav-item nav-link" href="about.html">About NYSL</a>
+          <a class="nav-item nav-link" href="registration.html">Registration</a>
+          <a class="nav-item nav-link" href="info.html">Game Information</a>
+          <a class="nav-item nav-link" href="rules.html">Rules</a>
+          <a class="nav-item nav-link" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
 
     <div id="bodycontent">
       <h3>Mission</h3>
@@ -47,12 +68,13 @@
         must be between the ages of 4 - 12 and reside in a Chicago northside neighborhood. NYSL is run by a small
         full-time staff, and relies on the generous volunteer time of parents and previous league members.</p>
     </div>
+    <footer class="bg-light border border-dark mb-3">
+      <p class="text-center p-2 mb-0">
+        © 2019 NYSL | All Rights Reserved
+      </p>
+    </footer>
   </div>
-  <footer class="bg-light border border-dark mb-3">
-    <p class="text-center p-2 mb-0">
-      © 2019 NYSL | All Rights Reserved
-    </p>
-  </footer>
+
   <!-- --------------------------------SCRIPTS------------------------------------- -->
   <!-- VUE development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
