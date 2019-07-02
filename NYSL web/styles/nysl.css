@@ -1,0 +1,6 @@
+#page>section{
+  display: none;
+}
+#page>section.current{
+  display: block;
+}

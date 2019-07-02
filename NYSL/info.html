@@ -17,7 +17,7 @@
 
 <body class="">
   <div class="container-fluid">
-    <div class="col d-flex flex-row justify-content-center d-md-none">
+    <div class="d-flex flex-row justify-content-center d-md-none">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner text-center">
           <div class="carousel-item active">
@@ -35,7 +35,12 @@
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      <div class="d-lg-none">
+        <h5><em>Game Information</em></h5>
+      </div>
+      <a class="navbar-brand" href="#">
+        <img src="img/nysl_logo.png" width="60" height="60" alt="logo NYSL">
+      </a>
       <div class="collapse navbar-collapse" id="dropnav">
         <div class="navbar-nav text-center">
           <a class="nav-item nav-link " href="index.html">Home</a>
@@ -46,133 +51,226 @@
           <a class="nav-item nav-link" href="contact.html">Contact</a>
         </div>
       </div>
-      <div class="d-lg-none">
-        <h5><em>Game Information</em></h5>
-      </div>
-      <a class="navbar-brand" href="#">
-        <img src="img/nysl_logo.png" width="60" height="60" alt="logo NYSL">
-      </a>
+
     </nav>
 
     <div class="text-justify">
-
       <h5 class="text-center"><em>Fall Schedule</em></h5>
-      <div class="">
+      <button class="btn btn-primary w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropcal"
+        aria-controls="dropcal" aria-expanded="false"> Calendar
+      </button>
+      <div class="collapse container-fluid" id="dropcal">
+        <!-- SEPTEMBER -->
         <button class="btn btn-primary w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropsep"
-          aria-controls="dropsep" aria-expanded="false"> SEPTEMBER
+          aria-controls="dropsep" aria-expanded="false"> September
         </button>
-        <div class="collapse" id="dropsep">
-          <table class="table">
-            <tr>
-              <th></th>
-              <th>Teams</th>
-              <th>Location</th>
-              <th>Times</th>
-            </tr>
-            <tr>
-              <td rowspan="2">9/01</td>
-              <td>U1 and U4</td>
-              <td>AJ Katzenmaier</td>
-              <td>9:30 a.m.</td>
-            </tr>
-            <tr>
-              <td>U3 and U2</td>
-              <td>Greenbay</td>
-              <td>1:00 p.m.</td>
-            </tr>
-            <tr>
-              <td rowspan="2">9/08</td>
-              <td>U5 and U6</td>
-              <td>Howard A Yeager</td>
-              <td>9:30 a.m.</td>
-            </tr>
-            <tr>
-              <td>U6 and U1</td>
-              <td>Marjorie P Hart</td>
-              <td>1:00 p.m.</td>
-            <tr>
-              <td rowspan="2">9/15</td>
+        <div class="collapse container-fluid" id="dropsep" data-parent="#dropcal">
+          <!-- 901 -->
+          <button class="btn btn-primary w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop901"
+            aria-controls="drop901" aria-expanded="false"> 9/01
+          </button>
+          <div class="collapse container-fluid" id="drop901" data-parent="#dropsep">
+            <table class="table">
+              <tr>
+                <th>Teams</th>
+                <th>Location</th>
+                <th>Times</th>
+              </tr>
+              <tr>
+                <td>U1 and U4</td>
+                <td>AJ Katzenmaier</td>
+                <td>9:30 a.m.</td>
+              </tr>
+              <tr>
+                <td>U3 and U2</td>
+                <td>Greenbay</td>
+                <td>1:00 p.m.</td>
+              </tr>
+            </table>
+          </div>
+          <!-- 908 -->
+          <button class="btn btn-primary w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop908"
+            aria-controls="drop908" aria-expanded="false">9/08
+          </button>
+          <div class="collapse container-fluid" id="drop908" data-parent="#dropsep">
+            <table class="table">
+              <tr>
+                <th>Teams</th>
+                <th>Location</th>
+                <th>Times</th>
+              </tr>
+              <tr>
+                <td>U5 and U6</td>
+                <td>Howard A Yeager</td>
+                <td>9:30 a.m.</td>
+              </tr>
+              <tr>
+                <td>U6 and U1</td>
+                <td>Marjorie P Hart</td>
+                <td>1:00 p.m.</td>
+              <tr>
+            </table>
+          </div>
+          <!-- 915 -->
+          <button class="btn btn-primary w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop915"
+            aria-controls="drop915" aria-expanded="false">9/15
+          </button>
+          <div class="collapse container-fluid" id="drop915" data-parent="#dropsep">
+            <table class="table">
+              <tr>
+                <th>Teams</th>
+                <th>Location</th>
+                <th>Times</th>
+              </tr>
               <td>U2 and U4</td>
               <td>North</td>
               <td>9:30 a.m.</td>
-            </tr>
-            <tr>
-              <td>U3 and U5</td>
-              <td>AJ Katzenmaier</td>
-              <td>1:00 p.m.</td>
-            <tr>
-              <td rowspan="2">9/22</td>
+              </tr>
+              <tr>
+                <td>U3 and U5</td>
+                <td>AJ Katzenmaier</td>
+                <td>1:00 p.m.</td>
+              <tr>
+            </table>
+          </div>
+          <!-- 922 -->
+          <button class="btn btn-primary w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop922"
+            aria-controls="drop922" aria-expanded="false">9/22
+          </button>
+          <div class="collapse container-fluid" id="drop922" data-parent="#dropsep">
+            <table class="table">
+              <tr>
+                <th>Teams</th>
+                <th>Location</th>
+                <th>Times</th>
+              </tr>
               <td>U1 and U3</td>
               <td>South</td>
               <td>9:30 a.m.</td>
-            </tr>
-            <tr>
-              <td>U2 and U6</td>
-              <td>Howard A Yeager</td>
-              <td>1:00 p.m.</td>
-            <tr>
-              <td>9/29</td>
-              <td>U4 and U5</td>
-              <td>Greenbay</td>
-              <td>9:30 a.m.</td>
-            </tr>
-          </table>
+              </tr>
+              <tr>
+                <td>U2 and U6</td>
+                <td>Howard A Yeager</td>
+                <td>1:00 p.m.</td>
+              <tr>
+            </table>
+          </div>
+          <!-- 929 -->
+          <button class="btn btn-primary w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop929"
+            aria-controls="drop929" aria-expanded="false"> 9/29
+          </button>
+          <div class="collapse container-fluid" id="drop929" data-parent="#dropsep">
+            <table class="table">
+              <tr>
+                <th>Teams</th>
+                <th>Location</th>
+                <th>Times</th>
+              </tr>
+              <tr>
+                <td>U4 and U5</td>
+                <td>Greenbay</td>
+                <td>9:30 a.m.</td>
+              </tr>
+            </table>
+          </div>
         </div>
-
-        <button class="btn btn-primary w-100" type="button" data-toggle="collapse" data-target="#dropoct"
-          aria-controls="dropoct" aria-expanded="false">OCTOBER
+        <!-- OCTOBER -->
+        <button class="btn btn-primary w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropoct"
+          aria-controls="dropoct" aria-expanded="false">October
         </button>
-        <div class="collapse" id="dropoct">
-          <table class="table">
-            <tr>
-              <th></th>
-              <th>Teams</th>
-              <th>Location</th>
-              <th>Times</th>
-            </tr>
-            <tr>
-              <td rowspan="2">10/06</td>
-              <td>U2 and U5</td>
-              <td>Marjorie P Hart</td>
-              <td>9:30 a.m.</td>
-            </tr>
-            <tr>
-              <td>U1 and U6</td>
-              <td>South</td>
-              <td>1:00 p.m.</td>
-            </tr>
-            <tr>
-              <td rowspan="2">10/08</td>
-              <td>U3 and U4</td>
-              <td>Howard A Yeager</td>
-              <td>9:30 a.m.</td>
-            </tr>
-            <tr>
-              <td>U5 and U1</td>
-              <td>Greenbay</td>
-              <td>1:00 p.m.</td>
-            <tr>
-              <td rowspan="2">10/20</td>
-              <td>U6 and U3</td>
-              <td>North</td>
-              <td>9:30 a.m.</td>
-            </tr>
-            <tr>
-              <td>U2 and U4</td>
-              <td>Marjorie P Hart</td>
-              <td>1:00 p.m.</td>
-            <tr>
-              <td rowspan="2">10/27</td>
-              <td>U3 and U1</td>
-              <td>AJ Katzenmaier</td>
-              <td>9:30 a.m.</td>
-            </tr>
-            <tr>
-              <td>U5 and U6</td>
-              <td>Howard A Yeager</td>
-              <td>1:00 p.m.</td>
-            </tr>
-          </table>
+        <div class="collapse container-fluid" id="dropoct" data-parent="#dropcal">
+          <!-- 1006 -->
+          <button class="btn btn-primary w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop1006"
+            aria-controls="drop1006" aria-expanded="false">10/06
+          </button>
+          <div class="collapse container-fluid" id="drop1006" data-parent="#dropoct">
+            <table class="table">
+              <tr>
+                <th>Teams</th>
+                <th>Location</th>
+                <th>Times</th>
+              </tr>
+              <tr>
+                <td>U2 and U5</td>
+                <td>Marjorie P Hart</td>
+                <td>9:30 a.m.</td>
+              </tr>
+              <tr>
+                <td>U1 and U6</td>
+                <td>South</td>
+                <td>1:00 p.m.</td>
+              </tr>
+            </table>
+          </div>
+          <!-- 1013 -->
+          <button class="btn btn-primary w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop1013"
+            aria-controls="drop1013" aria-expanded="false">10/13
+          </button>
+          <div class="collapse container-fluid" id="drop1013" data-parent="#dropoct">
+            <table class="table">
+              <tr>
+                <th>Teams</th>
+                <th>Location</th>
+                <th>Times</th>
+              </tr>
+              <tr>
+                <td>U3 and U4</td>
+                <td>Howard A Yeager</td>
+                <td>9:30 a.m.</td>
+              </tr>
+              <tr>
+                <td>U5 and U1</td>
+                <td>Greenbay</td>
+                <td>1:00 p.m.</td>
+              </tr>
+            </table>
+          </div>
+          <!-- 1020 -->
+          <button class="btn btn-primary w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop1020"
+            aria-controls="drop1020" aria-expanded="false">10/20
+          </button>
+          <div class="collapse container-fluid" id="drop1020" data-parent="#dropoct">
+            <table class="table">
+              <tr>
+                <th>Teams</th>
+                <th>Location</th>
+                <th>Times</th>
+              </tr>
+              <tr>
+                <td>U6 and U3</td>
+                <td>North</td>
+                <td>9:30 a.m.</td>
+              </tr>
+              <tr>
+                <td>U2 and U4</td>
+                <td>Marjorie P Hart</td>
+                <td>1:00 p.m.</td>
+              </tr>
+            </table>
+          </div>
+          <!-- 1027 -->
+          <button class="btn btn-primary w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop1027"
+            aria-controls="drop1027" aria-expanded="false">10/27
+          </button>
+          <div class="collapse container-fluid" id="drop1027" data-parent="#dropoct">
+            <table class="table">
+              <tr>
+                <th>Teams</th>
+                <th>Location</th>
+                <th>Times</th>
+              </tr>
+              <tr>
+                <td>U3 and U1</td>
+                <td>AJ Katzenmaier</td>
+                <td>9:30 a.m.</td>
+              </tr>
+              <tr>
+                <td>U5 and U6</td>
+                <td>Howard A Yeager</td>
+                <td>1:00 p.m.</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
 
