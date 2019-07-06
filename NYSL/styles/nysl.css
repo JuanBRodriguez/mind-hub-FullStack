@@ -1,6 +1,14 @@
-#page>section{
+
+
+/*.pages{
   display: none;
 }
-#page>section.current{
+.page.current{
   display: block;
+}*/
+
+body {
+  background:url(../img/Césped-Deportivo.jpg) no-repeat;
+  background-size:cover;
+  padding-bottom: 35px;
 }

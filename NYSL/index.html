@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="author" content="Lee Knowlton" />
-  <meta name="description" content="The NYSL Homepage" />
+  <meta name="description" content="The NYSL Rules" />
   <meta name="mobile-web-app-capable" content="yes">
-  <title>NYSL Home - Northside Youth Soccer League</title>
+  <title>NYSL Game Information- Northside Youth Soccer League</title>
   <link rel="shortcut icon" href="img/iconfinder_soccer_63158.png">
+  <link rel="stylesheet" href="styles/nysl.css">
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Bootstrap CSS -->
@@ -16,43 +17,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
-<body>
-  <div class="container-fluid">
-      <div class="d-flex flex-row justify-content-center d-md-none">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner text-center">
-            <div class="carousel-item active">
-              <img src="img/design2_image1.jpg" class="img-fluid d-block w-10" alt="2">
-            </div>
-            <div class="carousel-item text-center">
-              <img src="img/design1_image1.jpg" class="img-fluid d-block w-10" alt="1">
-            </div>
-          </div>
+<body class="">
+  <div class="" id="page">
+    <!--Navegador  -->
+    <nav class="navbar navbar-expand-lg navbar-light  border sticky-top">
+      <a class="navbar-brand" href="#">
+        <img src="img/nysl_logo.png" width="60" height="60" alt="logo NYSL">
+      </a>
+      <div class="d-lg-none">
+        <h5><em>Game Information</em></h5>
+      </div>
+      <button class="navbar-toggler btn-success" type="button" data-toggle="collapse" data-target="#dropnav"
+        aria-controls="dropnav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse border" id="dropnav" data-parent="#page">
+        <div class="navbar-nav text-center">
+          <a class="nav-item nav-link " href="#">
+            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#dropho"
+              aria-controls="dropho" aria-expanded="true">Home </button>
+          </a>
+          <a class="nav-item nav-link" href="#">
+            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#dropabout"
+              aria-controls="dropabout" aria-expanded="false">About NYSL</button>
+          </a>
+          <a class="nav-item nav-link" href="#">
+            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#dropinf"
+              aria-controls="dropinf" aria-expanded="false">Game Information </button>
+          </a>
+          <a class="nav-item nav-link" href="#">
+            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#dropru"
+              aria-controls="dropru" aria-expanded="false">Rules </button>
+          </a>
+          <a class="nav-item nav-link active" href="#">
+            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#dropcont"
+              aria-controls="dropcont" aria-expanded="false">Contact </button>
+          </a>
         </div>
       </div>
-      <!--  -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-toggleable-md">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/nysl_logo.png" width="60" height="60" alt="logo NYSL">
-        </a>
-        <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#dropnav"
-          aria-controls="dropnav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    </nav>
 
-        <div class="collapse navbar-collapse" id="dropnav">
-          <div class="navbar-nav text-center">
-            <a class="nav-item nav-link active" href="index.html">Home</a>
-            <a class="nav-item nav-link" href="about.html">About NYSL</a>
-            <a class="nav-item nav-link" href="registration.html">Registration</a>
-            <a class="nav-item nav-link" href="info.html">Game Information</a>
-            <a class="nav-item nav-link" href="rules.html">Rules</a>
-            <a class="nav-item nav-link" href="contact.html">Contact</a>
-          </div>
-        </div>
-      </nav>
-
-
+    <!-- Home -->
+    <div class="collapse container-fluid" id="dropho" data-parent="#page">
       <div class="row">
         <div class="col-12 text-center">
           <h2>August 4</h2>
@@ -65,42 +71,663 @@
           <p class=""> First Game of the Season (Check Game Schedule for details)</p>
         </div>
       </div>
-
-      <footer class="bg-light border border-dark mb-3">
-        <p class="text-center p-2 mb-0">
-          © 2019 NYSL | All Rights Reserved
-        </p>
-      </footer>
     </div>
-    <div>
-      <!-- --------------------------------SCRIPTS------------------------------------- -->
-      <!-- VUE development version, includes helpful console warnings -->
-      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-      <!-- Scrips personales -->
+    <!-- About NYSL -->
+    <div class="pages collapse container-fluid " id="dropabout" data-parent="#page">
+      <h3>Mission</h3>
+      <p class="">To support young athletes living in Chicago's northside neighborhoods, who have an interest in
+        learning and playing soccer, with opportunities to learn and practice skills related to the game of soccer,
+        specifically those skills around team cooperation and good sportsmanship.</p>
 
-      <!-- default script -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+      <h3>Vision</h3>
+      <p class="">The Northside Youth Soccer League aspires to develop strong, well-rounded, and mindful athletes
+        through the building of character, self-discipline, and leadership.</p>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+      <h3>General Information</h3>
+      <p class="">The Northside Youth Soccer League was established in 1996 to provide athletes residing in
+        Chicago's northside neighborhoods an environment in which to learn and play soccer. To be a member of NYSL, you
+        must be between the ages of 4 - 12 and reside in a Chicago northside neighborhood. NYSL is run by a small
+        full-time staff, and relies on the generous volunteer time of parents and previous league members.</p>
+    </div>
 
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-      <!-- The core Firebase JS SDK is always required and must be listed first -->
-      <script src="/__/firebase/6.2.2/firebase-app.js"></script>
+    <!-- Game Information -->
+    <div class="pages collapse container-fluid " id="dropinf" data-parent="#page">
+      <div class="navbar ">
+        <!-- Calendar boton-->
+        <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#dropcal"
+          aria-controls="dropcal" aria-expanded="true">
+          <img src="img/calendario.svg" alt="icon Calendar" class="icon">Calendar
+        </button>
+        <!-- Teams boton -->
+        <button class="btn btn-success " type="button" data-toggle="collapse" data-target="#dropteam"
+          aria-controls="dropteam" aria-expanded="false">
+          <img src="img/escudo.svg" alt="icon teams" class="icon">Teams
+        </button>
+        <!-- Game Location  boton-->
+        <button class="btn btn-success  " type="button" data-toggle="collapse" data-target="#droploc"
+          aria-controls="droploc" aria-expanded="false">
+          <img src="img/campo-de-futbol.svg" alt="icon Location" class="icon"> Locations
+        </button>
+      </div>
 
-      <!-- TODO: Add SDKs for Firebase products that you want to use
+      <!--Contenido  -->
+      <div class="container-fluid text-justify" id="items">
+        <h5 class="text-center"><em>Fall Schedule</em></h5>
+
+        <!-- Calendar -->
+        <div class="collapse container-fluid" id="dropcal" data-parent="#items">
+          <!-- SEPTEMBER -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropsep"
+            aria-controls="dropsep" aria-expanded="false"> September
+          </button>
+          <div class="collapse container-fluid" id="dropsep" data-parent="#dropcal">
+            <!-- 901 -->
+            <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop901"
+              aria-controls="drop901" aria-expanded="false"> 9/01
+            </button>
+            <div class="collapse container-fluid" id="drop901" data-parent="#dropsep">
+              <table class="table">
+                <tr>
+                  <th>Teams</th>
+                  <th>Location</th>
+                  <th>Times</th>
+                </tr>
+                <tr>
+                  <td>U1 and U4</td>
+                  <td>AJ Katzenmaier</td>
+                  <td>9:30 a.m.</td>
+                </tr>
+                <tr>
+                  <td>U3 and U2</td>
+                  <td>Greenbay</td>
+                  <td>1:00 p.m.</td>
+                </tr>
+              </table>
+            </div>
+            <!-- 908 -->
+            <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop908"
+              aria-controls="drop908" aria-expanded="false">9/08
+            </button>
+            <div class="collapse container-fluid" id="drop908" data-parent="#dropsep">
+              <table class="table">
+                <tr>
+                  <th>Teams</th>
+                  <th>Location</th>
+                  <th>Times</th>
+                </tr>
+                <tr>
+                  <td>U5 and U6</td>
+                  <td>Howard A Yeager</td>
+                  <td>9:30 a.m.</td>
+                </tr>
+                <tr>
+                  <td>U6 and U1</td>
+                  <td>Marjorie P Hart</td>
+                  <td>1:00 p.m.</td>
+                <tr>
+              </table>
+            </div>
+            <!-- 915 -->
+            <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop915"
+              aria-controls="drop915" aria-expanded="false">9/15
+            </button>
+            <div class="collapse container-fluid" id="drop915" data-parent="#dropsep">
+              <table class="table">
+                <tr>
+                  <th>Teams</th>
+                  <th>Location</th>
+                  <th>Times</th>
+                </tr>
+                <td>U2 and U4</td>
+                <td>North</td>
+                <td>9:30 a.m.</td>
+                </tr>
+                <tr>
+                  <td>U3 and U5</td>
+                  <td>AJ Katzenmaier</td>
+                  <td>1:00 p.m.</td>
+                <tr>
+              </table>
+            </div>
+            <!-- 922 -->
+            <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop922"
+              aria-controls="drop922" aria-expanded="false">9/22
+            </button>
+            <div class="collapse container-fluid" id="drop922" data-parent="#dropsep">
+              <table class="table">
+                <tr>
+                  <th>Teams</th>
+                  <th>Location</th>
+                  <th>Times</th>
+                </tr>
+                <td>U1 and U3</td>
+                <td>South</td>
+                <td>9:30 a.m.</td>
+                </tr>
+                <tr>
+                  <td>U2 and U6</td>
+                  <td>Howard A Yeager</td>
+                  <td>1:00 p.m.</td>
+                <tr>
+              </table>
+            </div>
+            <!-- 929 -->
+            <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop929"
+              aria-controls="drop929" aria-expanded="false"> 9/29
+            </button>
+            <div class="collapse container-fluid" id="drop929" data-parent="#dropsep">
+              <table class="table">
+                <tr>
+                  <th>Teams</th>
+                  <th>Location</th>
+                  <th>Times</th>
+                </tr>
+                <tr>
+                  <td>U4 and U5</td>
+                  <td>Greenbay</td>
+                  <td>9:30 a.m.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <!-- OCTOBER -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropoct"
+            aria-controls="dropoct" aria-expanded="false">October
+          </button>
+          <div class="collapse container-fluid" id="dropoct" data-parent="#dropcal">
+            <!-- 1006 -->
+            <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop1006"
+              aria-controls="drop1006" aria-expanded="false">10/06
+            </button>
+            <div class="collapse container-fluid" id="drop1006" data-parent="#dropoct">
+              <table class="table">
+                <tr>
+                  <th>Teams</th>
+                  <th>Location</th>
+                  <th>Times</th>
+                </tr>
+                <tr>
+                  <td>U2 and U5</td>
+                  <td>Marjorie P Hart</td>
+                  <td>9:30 a.m.</td>
+                </tr>
+                <tr>
+                  <td>U1 and U6</td>
+                  <td>South</td>
+                  <td>1:00 p.m.</td>
+                </tr>
+              </table>
+            </div>
+            <!-- 1013 -->
+            <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop1013"
+              aria-controls="drop1013" aria-expanded="false">10/13
+            </button>
+            <div class="collapse container-fluid" id="drop1013" data-parent="#dropoct">
+              <table class="table">
+                <tr>
+                  <th>Teams</th>
+                  <th>Location</th>
+                  <th>Times</th>
+                </tr>
+                <tr>
+                  <td>U3 and U4</td>
+                  <td>Howard A Yeager</td>
+                  <td>9:30 a.m.</td>
+                </tr>
+                <tr>
+                  <td>U5 and U1</td>
+                  <td>Greenbay</td>
+                  <td>1:00 p.m.</td>
+                </tr>
+              </table>
+            </div>
+            <!-- 1020 -->
+            <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop1020"
+              aria-controls="drop1020" aria-expanded="false">10/20
+            </button>
+            <div class="collapse container-fluid" id="drop1020" data-parent="#dropoct">
+              <table class="table">
+                <tr>
+                  <th>Teams</th>
+                  <th>Location</th>
+                  <th>Times</th>
+                </tr>
+                <tr>
+                  <td>U6 and U3</td>
+                  <td>North</td>
+                  <td>9:30 a.m.</td>
+                </tr>
+                <tr>
+                  <td>U2 and U4</td>
+                  <td>Marjorie P Hart</td>
+                  <td>1:00 p.m.</td>
+                </tr>
+              </table>
+            </div>
+            <!-- 1027 -->
+            <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop1027"
+              aria-controls="drop1027" aria-expanded="false">10/27
+            </button>
+            <div class="collapse container-fluid" id="drop1027" data-parent="#dropoct">
+              <table class="table">
+                <tr>
+                  <th>Teams</th>
+                  <th>Location</th>
+                  <th>Times</th>
+                </tr>
+                <tr>
+                  <td>U3 and U1</td>
+                  <td>AJ Katzenmaier</td>
+                  <td>9:30 a.m.</td>
+                </tr>
+                <tr>
+                  <td>U5 and U6</td>
+                  <td>Howard A Yeager</td>
+                  <td>1:00 p.m.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- Teams -->
+        <div class="collapse container-fluid" id="dropteam" data-parent="#items">
+          <!-- U1 -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropu1"
+            aria-controls="dropu1" aria-expanded="false">U1
+          </button>
+          <div class="collapse container-fluid" id="dropu1" data-parent="#dropteam">
+            za
+          </div>
+          <!-- U2 -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropu2"
+            aria-controls="dropu2" aria-expanded="false">U2
+          </button>
+          <div class="collapse container-fluid" id="dropu2" data-parent="#dropteam">
+            b
+          </div>
+          <!-- U3 -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropu3"
+            aria-controls="dropu3" aria-expanded="false">U3
+          </button>
+          <div class="collapse container-fluid" id="dropu3" data-parent="#dropteam">
+            b
+          </div>
+          <!-- U4 -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropu4"
+            aria-controls="dropu4" aria-expanded="false">U4
+          </button>
+          <div class="collapse container-fluid" id="dropu4" data-parent="#dropteam">
+            b
+          </div>
+          <!-- U5 -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropu5"
+            aria-controls="dropu5" aria-expanded="false">U5
+          </button>
+          <div class="collapse container-fluid" id="dropu5" data-parent="#dropteam">
+            b
+          </div>
+          <!-- U6 -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropu6"
+            aria-controls="dropu6" aria-expanded="false">U6
+          </button>
+          <div class="collapse container-fluid" id="dropu6" data-parent="#dropteam">
+            b
+          </div>
+        </div>
+        <!-- Game Location -->
+        <div class="collapse container-fluid " id="droploc" data-parent="#items">
+          <!-- AJ Katzenmaier -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropuaj"
+            aria-controls="dropuaj" aria-expanded="false"> AJ Katzenmaier
+          </button>
+          <div class="collapse container-fluid" id="dropuaj" data-parent="#droploc">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1049.9364645725686!2d-87.62962318831157!3d41.89997994915088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553921561565!5m2!1sen!2sar">
+            </iframe>
+            <br><a
+              href="https://www.google.com/maps/place/24+W+Walton+St,+Chicago,+IL+60610,+USA/@41.9002964,-87.6312391,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd34e07f6bac3:0x68a82e5d59952c86!8m2!3d41.9002924!4d-87.6290504?hl=en">
+              24 W. Walton St., Chicago, IL 60610</a>
+          </div>
+          <!-- Greenbay -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropgre"
+            aria-controls="dropgre" aria-expanded="false">Greenbay
+          </button>
+          <div class="collapse container-fluid" id="dropgre" data-parent="#droploc">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.025884368851!2d-87.64002798416092!3d41.913802279219496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921880555!5m2!1sen!2sar">
+            </iframe>
+            <br>
+            <a
+              href="https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+USA/@41.9138063,-87.640028,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138023!4d-87.6378393?hl=en">
+              1734 N. Orleans St., Chicago, IL 60614</a>
+          </div>
+          <!-- Marjorie P Hart -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropmar"
+            aria-controls="dropmar" aria-expanded="false">Marjorie P Hart
+          </button>
+          <div class="collapse container-fluid" id="dropmar" data-parent="#droploc">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.2919146584213!2d-87.64808628416054!3d41.92957827921837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921967829!5m2!1sen!2sar">
+            </iframe>
+            <br>
+            <a
+              href="https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+USA/@41.9295823,-87.6480863,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295783!4d-87.6458976?hl=en">
+              2625 N. Orchard St., Chicago, IL 60614</a>
+          </div>
+          <!-- Howard A Yeager -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drophow"
+            aria-controls="drophow" aria-expanded="false">Howard A Yeager
+          </button>
+          <div class="collapse container-fluid" id="drophow" data-parent="#droploc">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.58568308562!2d-87.66511458416065!3d41.92326457921862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921923003!5m2!1sen!2sar">
+            </iframe>
+            <br>
+            <a
+              href="https://www.google.com/maps/place/2245+N+Southport+Ave,+Chicago,+IL+60614,+USA/@41.9232686,-87.6651146,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd2e37f9b8d2d:0x62ad8b907dd755d6!8m2!3d41.9232646!4d-87.6629259?hl=en">
+              2245 N. Southport Ave., Chicago, IL 60614</a>
+          </div>
+          <!-- North -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropno"
+            aria-controls="dropno" aria-expanded="false">North
+          </button>
+          <div class="collapse container-fluid" id="dropno" data-parent="#droploc">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3377998492047!2d-87.64837698416109!3d41.907096479220044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af0e6ccc3%3A0x26c81c1d557667da!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553922003084!5m2!1sen!2sar">
+            </iframe>
+            <br>
+            <a
+              href="https://www.google.com/maps/place/1409+N+Ogden+Ave,+Chicago,+IL+60610,+USA/@41.9071005,-87.648377,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd33af0e6ccc3:0x26c81c1d557667da!8m2!3d41.9070965!4d-87.6461883?hl=en">
+              1409 N. Ogden Ave., Chicago, IL 60610</a>
+          </div>
+          <!-- South -->
+          <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropso"
+            aria-controls="dropso" aria-expanded="false">South
+          </button>
+          <div class="collapse container-fluid" id="dropso" data-parent="#droploc">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.74795052507!2d-87.6535553841608!3d41.91977677921884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553922034372!5m2!1sen!2sar">
+            </iframe>
+            <br>
+            <a
+              href="https://www.google.com/maps/place/2101+N+Fremont+St,+Chicago,+IL+60614,+USA/@41.9197808,-87.6535554,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd3196fb41dc7:0x970be7f7d6336df5!8m2!3d41.9197768!4d-87.6513667?hl=en">
+              2101 N. Fremont St., Chicago, IL 60614</a>
+          </div>
+        </div>
+
+        <p class="announcement"><br>*All games take place on Saturday</p>
+        <p><strong>Facility Type:</strong> Outdoor</p>
+        <p><strong>Additional Information:</strong> If deemed necessary by NYSL, games may be shortened or cancelled due
+          to extreme weather conditions.</p>
+        <p><strong>Please direct all questions to:</strong> Michael Randall, League Coordinator</p>
+        <address>
+          <p><strong>Phone:</strong> (630) 690-8132</p>
+          <p><strong>Email:</strong> <a href="mailto:michael.randall@chisoccer.org">michael.randall@chisoccer.org</a>
+          </p>
+        </address>
+      </div>
+    </div>
+
+    <!-- Rules -->
+    <div class="pages collapse container-fluid " id="dropru" data-parent="#page">
+      <div>
+        <h1>Northside Youth Soccer League</h1>
+        <h2>Rules of Play &amp; Policies</h2>
+        <p>FIFA rules shall govern NYSL play except as modified herein.</p>
+      </div>
+
+      <div>
+        <h2>Sportsmanship</h2>
+        <ul>
+          <li>The common interest that members of the Association share is to inspire youth to practice the ideals of
+            sportsmanship and fair play. Any player, coach, team, parent, spectator, administrator or referee whose
+            behavior detracts from this purpose is subject to disciplinary action regardless of technical soccer
+            background, expertise, accomplishments or standing.</li>
+        </ul>
+
+        <h2>Fifa Field Regulations</h2>
+        <ol>
+          <li>
+            <h3>Dimensions.</h3> FIFA Law 1 provides for flexible external field dimensions within a given maximum and
+            minimum width and length. These dimensions should be adhered to for all fields used by teams under 12 and
+            older.
+          </li>
+
+          <li>
+            <h3>Competition Fields.</h3> Fields used within the competition program must be a minimum of 100 x 60 yards.
+            Leagues, districts or associations participating in the state competition program that are unable to provide
+            a field that meets these minimum requirements must advise the State Competition Board which will assign its
+            Fields Committee to inspect the field and recommend to the Board whether or not a waiver of the minimum
+            dimensions should be granted. Teams from leagues, districts or associations that are unable to provide an
+            acceptable field may be required to play all their games away.
+          </li>
+
+          <li>
+            <h3>Fields Used By Young Age Groups.</h3>
+            <ol type="a">
+              <li>U-6 play on a field approximately 20 X 40 yards with no penalty areas. Fields for older age groups
+                should be progressively larger.</li>
+              <li>U-8 plays on a field 40-50 yards in length and 20-30 yards width.</li>
+              <li>U-10 play on a field 70-80 yards in length and 40-50 yards in width.</li>
+              <li>In addition, fields used by young age groups may have their internal dimensions and size of goal
+                similarly modified.</li>
+            </ol>
+          </li>
+
+          <li>
+            <h3>Team Bench Areas</h3>
+            <ol type="a">
+              <li>Recreation &amp; District Programs
+                <ul>
+                  <li>The decision for team/spectator placement on the field will be made by the governing body of that
+                    team. A team's bench area shall consist of that area at least one (1) yard away from the touchline
+                    and extending to twenty yards (20) both ways from the halfway line. In the event that field 2
+                    conditions require team benches to be on the same side of the field, a team's bench area shall
+                    consist of that area two(2) yards away from the touchline and extending twenty yards one (1) way
+                    from the halfway line.</li>
+                  <li>The home team has first choice as to where it wishes to locate its bench area. Coaches and
+                    substitutes are required to remain within their bench area during the game. Parents and spectators
+                    should occupy the same side of the field as the team they are supporting.</li>
+                </ul>
+              </li>
+              <li>State Competition League Only
+                <ul>
+                  <li>Except where it is determined by the referee to be impractical, team bench areas shall be along
+                    the same touchline. Each team bench area shall be located two yards outside the touchline, beginning
+                    not closer than five yards from midfield and extending not further than twenty yards from midfield.
+                    The home team shall have the right to choose the location of its bench area. Coaches and substitutes
+                    must remain within their team's bench area during the game.</li>
+                  <li>Parents and spectators must occupy the sideline opposite the team bench areas. Supporters of a
+                    team must assemble on the side of the midfield facing the team bench area of that team. There shall
+                    be a buffer zone extending ten yards on each side of the midfield that may not be occupied by
+                    parents or spectators. Match officials shall be empowered to enforce these provisions and may
+                    suspend or terminate games in the event that any team, coach, parent, or spectator declines to abide
+                    by requests from match officials to comply with these standards.</li>
+                </ul>
+              </li>
+            </ol>
+          </li>
+        </ol>
+
+        <h2>Equipment</h2>
+        <ul>
+          <li>We will abide by and accept equipment standards as defined by FIFA, USSF and USYSA.</li>
+        </ul>
+
+        <h2>Number of Players</h2>
+        <ul>
+          <li>
+            <h3>Team Size.</h3> Except as noted below, below, team rosters shall consist of not less than eleven nor
+            more than eighteen players. A team must have at least seven (7) players present and able to play before
+            referees are permitted to start a sanctioned game. No more than eleven (11) players per team may be on the
+            field at any one time during the game.
+          </li>
+          <li>
+            <h3>Size of Age Group Teams.</h3> In order to give player's maximum opportunity to develop in the game of
+            soccer, U-6 through U-1O play modified rules and size of roster as stated in United States Youth Soccer
+            Association (USYSA) rules. It is strongly recommended that U-6 and U-8 play 4 v 4. UYSA shall not sanction
+            games involving teams under 10 or younger unless such games are conducted with not more than eight (8)
+            players per side. (National rule 4036 section 2)
+          </li>
+          <li>Recreational/Developmental players at other ages or where numbers in the playing area are low are strongly
+            encouraged to play small-sided games on reduced field size.</li>
+        </ul>
+
+        <h2>Substitutions</h2>
+        <ul>
+          <li>Teams may make an unlimited number of substitutions at the times indicated below. A player who has been
+            replaced may re-enter the game as a substitute at a later time.
+            <ol>
+              <li>Prior to a throw-in your favor.</li>
+              <li>Prior to a goalkick by either team.</li>
+              <li>After a goal by either team.</li>
+              <li>After an injury, by either team, when the referee stops play.</li>
+              <li>At half time.</li>
+              <li>When a player has been &quot;cautioned&quot;, only the player receiving &quot;caution&quot; may be
+                substituted.</li>
+            </ol>
+          </li>
+        </ul>
+
+        <h2>Confiscated Player Passes</h2>
+        <ul>
+          <li>Passes of any individual(s) ejected from any match shall be retained after the match by the referee. The
+            pass of any individual who has received a third caution (yellow card) during a playing year shall be
+            confiscated by the referee at the conclusion of the match in which the third caution was received. That
+            player will be suspended from playing in the next game in which the offending participant would otherwise be
+            eligible to participate. This process will continue so that for every third yellow card received during a
+            playing year, the player will be suspended from playing in the next game (after the receipt of a third
+            yellow card) for which the offending participate would otherwise be eligible to participate. The referee
+            shall deliver all confiscated passes to the UYSA State Office within forty-eight (48) hours of the
+            conclusion of the match.</li>
+        </ul>
+
+        <h2>All-Play</h2>
+        <ul>
+          <li>All-play means that every recreation player on every team shall play at least fifty percent of each game.
+            Coaches in the competition program are encouraged to play their players 50% of each game.
+            <ul>
+              <li>A Coach shall be permitted to not play a player 50% of each game under special circumstances, e.g.,
+                unexcused absences from practice and/or games, ungentlemanly conduct at practice and/or games, and
+                injuries.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2>Player's Equipment</h2>
+        <ul>
+          <li>Where the uniform colors of both teams are so similar that the referee orders a change, the designated
+            home team must change to colors distinct from those of the opponent.</li>
+        </ul>
+
+        <h2>Mixed Teams</h2>
+        <ul>
+          <li>
+            <h3>Girls Playing On Boys' Teams.</h3> Girls are eligible to play on boys'teams with parent/guardian
+            permission.
+          </li>
+          <li>
+            <h3>Types of Teams.</h3> Teams with females only are Girls Teams. All others are Boys Teams.
+          </li>
+        </ul>
+
+        <h2>Coaching from the Sidelines</h2>
+        <ul>
+          <li>Coaching from the sidelines, i.e., giving direction to one's own team on points of strategy and position,
+            is permitted provided that:
+            <ol>
+              <li>No mechanical, electrical or other devices are used to amplify the voice.</li>
+              <li>The tone of voice is informative and not a harangue.</li>
+              <li>The coaching takes place within the team's bench area.</li>
+              <li>No coach, substitute, player or spectator is to make derogatory remarks or gestures to the referees,
+                linesmen, players, substitutes or spectators.</li>
+              <li>No coach, player, substitute or spectator is to use profanity or incite, in any manner, disruptive
+                behavior of any kind.</li>
+            </ol>
+          </li>
+        </ul>
+
+        <h2>Game Termination</h2>
+        <ul>
+          <li>Any game terminated after 15 minutes into the second half by the referee by reason of the elements, or by
+            reason of grave disorder on the part of the coaches, players or spectators of a team that is losing at the
+            point that the game is terminated, shall stand as a completed game. If a team is ahead and the game is
+            called because of their actions they will lose the game 1-0.
+        </ul>
+
+        <h2>Conditions of Replay of Games</h2>
+        <ul>
+          <li>Any game which is required to be replayed as a result of any protest orappeal, shall be subject to the
+            following conditions:
+            <ol>
+              <li>The game shall be replayed on the same field, as was the suspended or protested game, unless otherwise
+                agreed by the coaches.</li>
+              <li>Impartial referees shall be assigned to the new game.</li>
+              <li>The PROTEST AND APPEALS COMMITTEE shall have the power to impose such additional conditions on the
+                replay of the game, as it deems appropriate under the circumstances.</li>
+            </ol>
+          </li>
+        </ul>
+
+        <h2>Referee Responsibilities</h2>
+        <ul>
+          <li> The referee shall verify the identity of the players and coaches with his/her player pass. He shall
+            collect the passes of those players and coaches who are to participate in the game. The referee must allow
+            no player into the game for whom he/she has no pass.</li>
+          <li>Upon completion of the game, the referee shall send his/her report to the UYSA offices within four (4)
+            days, holidays excluded. If a coach or a player is ejected, the referee report form is required within
+            forty-eight (48) hours along with the player/coach pass.</li>
+          <li>A referee report form must be filed for every game played.</li>
+          <li>Each team must determine whether or not referees are registered prior to the start of each game. Upon
+            request, referees officiating at any game must willingly and without bias, show documentation regarding
+            their certification level and registration standing with the USSF to coach, assistant coach, or team captain
+            of teams participating in that game. Prior to the game a coach may decide to postpone the game if the
+            referees do not produce the requested documentation. The game is to be replayed at a later date.</li>
+          <li>Referees not complying with this section will be referred to the Disciplinary Committee.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="pages collapse container-fluid " id="dropcont" data-parent="#page">
+      <p>Please email us at <a href="mailto:nysl@chisoccer.org">nysl@chisoccer.org</a></p>
+
+      <p>We will reply to your email as soon as we can.</p>
+    </div>
+  </div>
+  <!-- Pie de pagina -->
+  <footer class="bg-light border border-dark mb-3">
+    <p class="text-center p-2 mb-0">
+      © 2019 NYSL | All Rights Reserved
+    </p>
+  </footer>
+  <!-- --------------------------------SCRIPTS------------------------------------- -->
+  <!-- VUE development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Scrips personales -->
+
+  <!-- default script -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/6.2.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#reserved-urls -->
 
-      <!-- Initialize Firebase -->
-      <script src="/__/firebase/init.js"></script>
-    </div>
-
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
 </body>
 
 </html>
