@@ -1,15 +1,5 @@
-
-
-/*.pages{
-  display: none;
-}
-.page.current{
-  display: block;
-}*/
-
 body {
   background:url(../img/Césped-Deportivo.jpg) repeat;
   background-size:contain;
   padding-bottom: 35px;
-  position: relative;
 }
