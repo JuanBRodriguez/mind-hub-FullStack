@@ -1,6 +1,25 @@
+var orientacion="";
+
+/*window.addEventListener("orientationchange", ()=> {
+   console.log(window.screen.orientation);
+   orientacion=window.screen.orientation.type;
+
+   if (orientacion=="landscape-primary") {
+      console.log("horizontal");
+      $("#inf-land").css("display","block");
+   }else{
+      console.log("vertical");
+      $("#inf-land").css("display","none");
+   }
+
+});*/
+
+
+
 $("button").click(function () {
    let nameclass = this.className;
    console.log(nameclass);
+
    // options info
    if (nameclass.includes("find-opt-cal")) { //open calendar
       $("#drop-cal").collapse('show');
@@ -11,6 +30,14 @@ $("button").click(function () {
    if (nameclass.includes("find-opt-loc")) { //open locations
       $("#drop-loc").collapse('show');
    }
+   
+   // lanscape clone 
+   if (nameclass.includes("fecha")) { //open locations
+      $(this).next().appendTo("#inf-land"); 
+      //$( "#drop901").clone().appendTo("#inf-land");
+   }
+   
+
 });
 
 $("a").click(function () {
