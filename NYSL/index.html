@@ -101,7 +101,7 @@
 
       <div class="d-flex justify-content-between ">
         <!-- Calendar boton-->
-        <button class="btn btn-success find-opt-cal" type="button" aria-expanded="True">
+        <button class="btn btn-success find-opt-cal" aria-expanded="True">
           <img src="img/calendario.svg" alt="icon Calendar" class="icon">Calendar
         </button>
         <!-- Teams boton -->
@@ -120,44 +120,36 @@
       <h5 class="text-center"><em>Fall Schedule</em></h5>
 
       <!--Contenido  -->
-      <div class="text-justify container-fluid" id="items">
-        <div class="row">
-          <div class="col-12 col-sm-6">
+      <div class="text-justify " id="items">
+        <div class="">
+          <div class="">
             <!-- Calendar -->
             <div class="collapse show" id="drop-cal" data-parent="#items">
               <!-- SEPTEMBER -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropsep"
-                aria-controls="dropsep" aria-expanded="false"> September
+              <button class="btn btn-success w-100 mb-2 find-mes-sep"> September
               </button>
-              <div class="collapse container-fluid" id="dropsep" data-parent="#drop-cal">
+              <div class="row collapse container-fluid" id="drop-sep" data-parent="#drop-cal">
                 <!-- 901 -->
-                <button class="btn btn-success w-100 mb-3 fecha" type="button" data-toggle="collapse"
-                  data-target="#drop901" aria-controls="drop901" aria-expanded="false"> 9/01
+                <div class="col-12 col-sm-6">
+                  <button class="btn btn-success w-100  mb-2 find-fecha-901" type="button"
+                  data-toggle="collapse" data-target="#drop901" aria-controls="drop901" aria-expanded="false"> 9/01
                 </button>
-                <div class="collapse" id="drop901" data-parent="#dropsep">
-                  <table class="table">
-                    <tr>
-                      <th>Teams</th>
-                      <th>Location</th>
-                      <th>Times</th>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="find-team-u1">U1</a> and <a href="#" class="find-team-u4">U4</a></td>
-                      <td><a href="#" class="find-loc-aj">AJ Katzenmaier</a></td>
-                      <td>9:30 a.m.</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="find-team-u3">U3</a> and <a href="#" class="find-team-u2">U2</a></td>
-                      <td><a href="#" class="find-loc-gre">Greenbay</a></td>
-                      <td>1:00 p.m.</td>
-                    </tr>
-                  </table>
+                </div>
+                <div class="collapse col-12 col-sm-6" id="drop901" data-parent="#drop-sep">
+                  <div class="text-center bg-transparent border border-success mb-2">
+                    <h5><a href="#" class="find-team-u1">U1</a> and <a href="#" class="find-team-u4">U4</a></h5>
+                    <p>9:30 a.m. in <a href="#" class="find-loc-aj">AJ Katzenmaier</a></p>
+                  </div>
+                  <div class="text-center bg-transparent border border-success mb-2">
+                    <h5><a href="#" class="find-team-u3">U3</a> and <a href="#" class="find-team-u2">U2</a></h5>
+                    <p>1:00 p.m. in <a href="#" class="find-loc-gre">Greenbay</a></p>
+                  </div>
                 </div>
                 <!-- 908 -->
-                <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop908"
-                  aria-controls="drop908" aria-expanded="false">9/08
+                <button class="btn btn-success w-100 mb-2 fecha" type="button" data-toggle="collapse"
+                  data-target="#drop908" aria-controls="drop908" aria-expanded="false">9/08
                 </button>
-                <div class="collapse " id="drop908" data-parent="#dropsep">
+                <div class="collapse " id="drop908" data-parent="#drop-sep">
                   <table class="table-sm">
                     <tr>
                       <th>Teams</th>
@@ -177,10 +169,10 @@
                   </table>
                 </div>
                 <!-- 915 -->
-                <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop915"
+                <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#drop915"
                   aria-controls="drop915" aria-expanded="false">9/15
                 </button>
-                <div class="collapse " id="drop915" data-parent="#dropsep">
+                <div class="collapse " id="drop915" data-parent="#drop-sep">
                   <table class="table-sm">
                     <tr>
                       <th>Teams</th>
@@ -199,10 +191,10 @@
                   </table>
                 </div>
                 <!-- 922 -->
-                <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop922"
+                <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#drop922"
                   aria-controls="drop922" aria-expanded="false">9/22
                 </button>
-                <div class="collapse " id="drop922" data-parent="#dropsep">
+                <div class="collapse " id="drop922" data-parent="#drop-sep">
                   <table class="table-sm">
                     <tr>
                       <th>Teams</th>
@@ -221,10 +213,10 @@
                   </table>
                 </div>
                 <!-- 929 -->
-                <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop929"
+                <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#drop929"
                   aria-controls="drop929" aria-expanded="false"> 9/29
                 </button>
-                <div class="collapse " id="drop929" data-parent="#dropsep">
+                <div class="collapse " id="drop929" data-parent="#drop-sep">
                   <table class="table-sm">
                     <tr>
                       <th>Teams</th>
@@ -240,15 +232,13 @@
                 </div>
               </div>
               <!-- OCTOBER -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropoct"
-                aria-controls="dropoct" aria-expanded="false">October
-              </button>
-              <div class="collapse container-fluid" id="dropoct" data-parent="#drop-cal">
+              <button class="btn btn-success w-100 mb-2 find-mes-oct">October </button>
+              <div class="collapse container-fluid" id="drop-oct" data-parent="#drop-cal">
                 <!-- 1006 -->
-                <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop1006"
+                <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#drop1006"
                   aria-controls="drop1006" aria-expanded="false">10/06
                 </button>
-                <div class="collapse " id="drop1006" data-parent="#dropoct">
+                <div class="collapse " id="drop1006" data-parent="#drop-oct">
                   <table class="table-sm">
                     <tr>
                       <th>Teams</th>
@@ -268,10 +258,10 @@
                   </table>
                 </div>
                 <!-- 1013 -->
-                <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop1013"
+                <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#drop1013"
                   aria-controls="drop1013" aria-expanded="false">10/13
                 </button>
-                <div class="collapse" id="drop1013" data-parent="#dropoct">
+                <div class="collapse" id="drop1013" data-parent="#drop-oct">
                   <table class="table-sm">
                     <tr>
                       <th>Teams</th>
@@ -291,10 +281,10 @@
                   </table>
                 </div>
                 <!-- 1020 -->
-                <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop1020"
+                <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#drop1020"
                   aria-controls="drop1020" aria-expanded="false">10/20
                 </button>
-                <div class="collapse " id="drop1020" data-parent="#dropoct">
+                <div class="collapse " id="drop1020" data-parent="#drop-oct">
                   <table class="table-sm">
                     <tr>
                       <th>Teams</th>
@@ -314,10 +304,10 @@
                   </table>
                 </div>
                 <!-- 1027 -->
-                <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drop1027"
+                <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#drop1027"
                   aria-controls="drop1027" aria-expanded="false">10/27
                 </button>
-                <div class="collapse " id="drop1027" data-parent="#dropoct">
+                <div class="collapse " id="drop1027" data-parent="#drop-oct">
                   <table class="table-sm">
                     <tr>
                       <th>Teams</th>
@@ -341,7 +331,7 @@
             <!-- Teams -->
             <div class="collapse" id="drop-tea" data-parent="#items">
               <!-- U1 -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropu1"
+              <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#dropu1"
                 aria-controls="dropu1" aria-expanded="false">U1
               </button>
               <div class="collapse " id="dropu1" data-parent="#drop-tea">
@@ -397,7 +387,7 @@
               </div>
 
               <!-- U2 -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropu2"
+              <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#dropu2"
                 aria-controls="dropu2" aria-expanded="false">U2
               </button>
               <div class="collapse " id="dropu2" data-parent="#drop-tea">
@@ -447,7 +437,7 @@
               </div>
 
               <!-- U3 -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropu3"
+              <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#dropu3"
                 aria-controls="dropu3" aria-expanded="false">U3
               </button>
               <div class="collapse " id="dropu3" data-parent="#drop-tea">
@@ -504,7 +494,7 @@
               </div>
 
               <!-- U4 -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropu4"
+              <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#dropu4"
                 aria-controls="dropu4" aria-expanded="false">U4
               </button>
               <div class="collapse " id="dropu4" data-parent="#drop-tea">
@@ -555,7 +545,7 @@
               </div>
 
               <!-- U5 -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropu5"
+              <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#dropu5"
                 aria-controls="dropu5" aria-expanded="false">U5
               </button>
               <div class="collapse " id="dropu5" data-parent="#drop-tea">
@@ -611,7 +601,7 @@
               </div>
 
               <!-- U6 -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropu6"
+              <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#dropu6"
                 aria-controls="dropu6" aria-expanded="false">U6
               </button>
               <div class="collapse " id="dropu6" data-parent="#drop-tea">
@@ -668,7 +658,7 @@
             <!-- Game Location -->
             <div class="collapse find-loc" id="drop-loc" data-parent="#items">
               <!-- AJ Katzenmaier -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropaj"
+              <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#dropaj"
                 aria-controls="dropaj" aria-expanded="false"> AJ Katzenmaier
               </button>
               <div class="collapse find-loc" id="dropaj" data-parent="#drop-loc">
@@ -682,7 +672,7 @@
                   24 W. Walton St., Chicago, IL 60610</a>
               </div>
               <!-- Greenbay -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropgre"
+              <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#dropgre"
                 aria-controls="dropgre" aria-expanded="false">Greenbay
               </button>
               <div class="collapse find-loc" id="dropgre" data-parent="#drop-loc">
@@ -697,7 +687,7 @@
               </div>
 
               <!-- Marjorie P Hart -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropmar"
+              <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#dropmar"
                 aria-controls="dropmar" aria-expanded="false">Marjorie P Hart
               </button>
               <div class="collapse find-loc" id="dropmar" data-parent="#drop-loc">
@@ -713,7 +703,7 @@
               </div>
 
               <!-- Howard A Yeager -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#drophow"
+              <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#drophow"
                 aria-controls="drophow" aria-expanded="false">Howard A Yeager
               </button>
               <div class="collapse find-loc" id="drophow" data-parent="#drop-loc">
@@ -728,7 +718,7 @@
               </div>
 
               <!-- North -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropnor"
+              <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#dropnor"
                 aria-controls="dropnor" aria-expanded="false">North
               </button>
               <div class="collapse find-loc" id="dropnor" data-parent="#drop-loc">
@@ -743,7 +733,7 @@
               </div>
 
               <!-- South -->
-              <button class="btn btn-success w-100 mb-3" type="button" data-toggle="collapse" data-target="#dropsou"
+              <button class="btn btn-success w-100  mb-2" type="button" data-toggle="collapse" data-target="#dropsou"
                 aria-controls="dropsou" aria-expanded="false">South
               </button>
               <div class="collapse find-loc" id="dropsou" data-parent="#drop-loc">
@@ -762,9 +752,9 @@
           </div>
 
           <!-- informacion in landscape -->
-          <div class="col-12 col-sm-6" id="inf-land">
-            aaaaaaaaaaaaaaaasdasdasbgcgsdftsdfsdf
-          </div>
+          <!-- <div class="col-12 col-sm-6" id="inf-land">
+
+          </div> -->
         </div>
 
         <!-- informacion adicional -->
@@ -1021,7 +1011,7 @@
   </div>
 
   <!-- Pie de pagina -->
-  <footer class="bg-success border border-dark mb-3">
+  <footer class="bg-success border border-dark  mb-2">
     <p class="text-center p-2 mb-0">
       © 2019 NYSL | All Rights Reserved
     </p>

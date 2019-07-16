@@ -12,6 +12,6 @@ body {
 
 @media all and (orientation: landscape) {
   #inf-land {
-    display: inline-block;
+    display: block;
   }
 }
