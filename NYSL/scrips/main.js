@@ -1,13 +1,13 @@
-var orientacion="";
+var orientacion = "";
 
-window.addEventListener("orientationchange", ()=> {
+window.addEventListener("orientationchange", () => {
    console.log(window.screen.orientation);
-   orientacion=window.screen.orientation.type;
+   orientacion = window.screen.orientation.type;
 
-   if (orientacion=="landscape-primary") {
+   if (orientacion == "landscape-primary") {
       console.log("horizontal");
 
-   }else{
+   } else {
       console.log("vertical");
 
    }
@@ -18,23 +18,28 @@ $("button").click(function () {
    console.log(nameclass);
 
    // options info
-   if (nameclass.includes("find-opt-cal")) { //open calendar
-      $("#drop-cal").collapse('show');
-   }
-   if (nameclass.includes("find-opt-tea")) { //open teams
-      $("#drop-tea").collapse('show');
-   }
-   if (nameclass.includes("find-opt-loc")) { //open locations
-      $("#drop-loc").collapse('show');
-   }
-   // calendar
-   if (nameclass.includes("find-mes-sep")) { //open september
-      $("#drop-sep").collapse('toggle');
-   }
-   if (nameclass.includes("find-mes-oct")) { //open october
-      $("#drop-oct").collapse('toggle');
-   }
-   
+   Visualizar(nameclass, "find-opt-cal","#drop-cal", "show" );//open calendar
+   Visualizar(nameclass, "find-opt-tea","#drop-tea", "show" );//open calendar
+   Visualizar(nameclass, "find-opt-loc","#drop-loc", "show" );//open calendar
+
+ ///////////// calendar
+
+   Visualizar(nameclass, "find-mes-sep","#drop-sep", "toggle" );//open september
+   // fechas septiembre
+   Visualizar(nameclass, "find-fecha-901","#drop-901", "toggle" ); //open 901
+   Visualizar(nameclass, "find-fecha-908","#drop-908", "toggle" ); //open 908
+   Visualizar(nameclass, "find-fecha-915","#drop-915", "toggle" ); //open 915
+   Visualizar(nameclass, "find-fecha-922","#drop-922", "toggle" ); //open 922
+   Visualizar(nameclass, "find-fecha-929","#drop-929", "toggle" ); //open 929
+
+   // 
+   Visualizar(nameclass, "find-mes-oct","#drop-oct", "toggle" ); //open october
+   // fechas octubre
+   Visualizar(nameclass, "find-fecha-1006","#drop-1006", "toggle" ); //open 1006
+   Visualizar(nameclass, "find-fecha-1013","#drop-1013", "toggle" ); //open 1013
+   Visualizar(nameclass, "find-fecha-1020","#drop-1020", "toggle" ); //open 1020
+   Visualizar(nameclass, "find-fecha-1027","#drop-1027", "toggle" ); //open 1027
+
    // lanscape clone 
    // if (nameclass.includes("fecha")) { //open locations
    //    $(this).next(".collapse").appendTo("#inf-land");
@@ -44,7 +49,7 @@ $("button").click(function () {
 $("a").click(function () {
    let nameclass = this.className;
    console.log(nameclass);
-   
+
    // nav bar
    if (nameclass.includes("nav-item")) { //drop nav al seleccionar
       $("#dropnav").collapse('hide');
@@ -116,3 +121,9 @@ $("a").click(function () {
       $("#dropu6").collapse('show');
    }
 });
+
+function Visualizar(clases, buscado, controlado, accion){
+   if (clases.includes(buscado)) {
+      $(controlado).collapse(accion);
+   }
+}
