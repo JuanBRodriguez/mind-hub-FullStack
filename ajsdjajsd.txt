@@ -1,0 +1,35 @@
+celular:
+
+marca
+modelo
+camara-del
+camara-tra
+
+sacar-foto
+whatsapear
+llamar
+
+Ventilador:
+
+color
+aspas
+rpm-max
+
+encender
+apagar
+cambio de velocidad
+
+arte
+
+autor
+critica
+tipo
+valor
+
+trasmitir emociones
+mostrar
+restaurar
+
+
+
+

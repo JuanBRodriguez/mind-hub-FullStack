@@ -13,8 +13,6 @@ window.addEventListener("orientationchange", ()=> {
    }
 });
 
-
-
 $("button").click(function () {
    let nameclass = this.className;
    console.log(nameclass);
