@@ -1,31 +1,109 @@
 <!DOCTYPE HTML>
 <html lang="es">
-    <head>
-        <meta charset="utf-8"/>
-        <title>Conseguir hash de la url con javascript</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
- 
-        <script type="text/javascript">
-           $(document).ready(function(e) { 
-           // Cuando le dás click muestra #content
-           $('.btn-show-alert').click(function(){
-              $("#content").toggleClass("hide");  
-           });
-            
-           // Simular click
-           $('.btn-show-alert').click();
-           });
-       </script>
-    </head>
-    <body>
-      <div class="col-lg-10">
-      <br/>
-        <p>
-        <button class="btn btn-success btn-show-alert">Mostrar alerta</button>
-        </p>
-        <div id="content" class="hide alert alert-warning">Has dado click en el botón para mostrar esta alerta</div>
-       </div>
-    </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Conseguir hash de la url con javascript</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- AJ Katzenmaier -->
+  <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropaj"
+    aria-controls="dropaj" aria-expanded="false"> AJ Katzenmaier
+  </button>
+  <div class="collapse find-loc" id="dropaj" data-parent="#drop-loc">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1049.9364645725686!2d-87.62962318831157!3d41.89997994915088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553921561565!5m2!1sen!2sar">
+      </iframe>
+    </div> <br>
+    <a
+      href="https://www.google.com/maps/place/24+W+Walton+St,+Chicago,+IL+60610,+USA/@41.9002964,-87.6312391,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd34e07f6bac3:0x68a82e5d59952c86!8m2!3d41.9002924!4d-87.6290504?hl=en">
+      24 W. Walton St., Chicago, IL 60610</a>
+  </div>
+  <!-- Greenbay -->
+  <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropgre"
+    aria-controls="dropgre" aria-expanded="false">Greenbay
+  </button>
+  <div class="collapse find-loc" id="dropgre" data-parent="#drop-loc">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.025884368851!2d-87.64002798416092!3d41.913802279219496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921880555!5m2!1sen!2sar">
+      </iframe>
+    </div><br>
+    <a
+      href="https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+USA/@41.9138063,-87.640028,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138023!4d-87.6378393?hl=en">
+      1734 N. Orleans St., Chicago, IL 60614</a>
+  </div>
+
+  <!-- Marjorie P Hart -->
+  <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropmar"
+    aria-controls="dropmar" aria-expanded="false">Marjorie P Hart
+  </button>
+  <div class="collapse find-loc" id="dropmar" data-parent="#drop-loc">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.2919146584213!2d-87.64808628416054!3d41.92957827921837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921967829!5m2!1sen!2sar">
+      </iframe>
+    </div>
+    <br>
+    <a
+      href="https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+USA/@41.9295823,-87.6480863,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295783!4d-87.6458976?hl=en">
+      2625 N. Orchard St., Chicago, IL 60614</a>
+  </div>
+
+  <!-- Howard A Yeager -->
+  <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#drophow"
+    aria-controls="drophow" aria-expanded="false">Howard A Yeager
+  </button>
+  <div class="collapse find-loc" id="drophow" data-parent="#drop-loc">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.58568308562!2d-87.66511458416065!3d41.92326457921862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921923003!5m2!1sen!2sar">
+      </iframe>
+    </div> <br>
+    <a
+      href="https://www.google.com/maps/place/2245+N+Southport+Ave,+Chicago,+IL+60614,+USA/@41.9232686,-87.6651146,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd2e37f9b8d2d:0x62ad8b907dd755d6!8m2!3d41.9232646!4d-87.6629259?hl=en">
+      2245 N. Southport Ave., Chicago, IL 60614</a>
+  </div>
+
+  <!-- North -->
+  <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropnor"
+    aria-controls="dropnor" aria-expanded="false">North
+  </button>
+  <div class="collapse find-loc" id="dropnor" data-parent="#drop-loc">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3377998492047!2d-87.64837698416109!3d41.907096479220044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af0e6ccc3%3A0x26c81c1d557667da!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553922003084!5m2!1sen!2sar">
+      </iframe>
+    </div> <br>
+    <a
+      href="https://www.google.com/maps/place/1409+N+Ogden+Ave,+Chicago,+IL+60610,+USA/@41.9071005,-87.648377,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd33af0e6ccc3:0x26c81c1d557667da!8m2!3d41.9070965!4d-87.6461883?hl=en">
+      1409 N. Ogden Ave., Chicago, IL 60610</a>
+  </div>
+
+  <!-- South -->
+  <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropsou"
+    aria-controls="dropsou" aria-expanded="false">South
+  </button>
+  <div class="collapse find-loc" id="dropsou" data-parent="#drop-loc">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.74795052507!2d-87.6535553841608!3d41.91977677921884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553922034372!5m2!1sen!2sar">
+      </iframe>
+    </div>
+
+    <br>
+    <a
+      href="https://www.google.com/maps/place/2101+N+Fremont+St,+Chicago,+IL+60614,+USA/@41.9197808,-87.6535554,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd3196fb41dc7:0x970be7f7d6336df5!8m2!3d41.9197768!4d-87.6513667?hl=en">
+      2101 N. Fremont St., Chicago, IL 60614</a>
+  </div>
+  </div>
+</body>
+
 </html>
