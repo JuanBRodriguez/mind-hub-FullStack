@@ -2,13 +2,10 @@ var orientacion = "";
 orientacion = window.screen.orientation.type;
 console.log(orientacion);
 
-if (orientacion == "landscape-primary") {
-   console.log("horizontal");
-} else {
-   console.log("vertical");
-}
 window.addEventListener("orientationchange", () => {
    console.log(window.screen.orientation);
+   orientacion = window.screen.orientation.type;
+   console.log(orientacion);
    if (orientacion == "landscape-primary") {
       console.log("horizontal");
    } else {
@@ -20,15 +17,16 @@ $("button").click(function () {
    let nameclass = this.className;
    console.log(nameclass);
    if (orientacion == "landscape-primary") {
-      $("#drop-game").collapse('show'); //cierra cualquier informacion anterior
+      $("#drop-game").collapse('show'); //mantiene cualquier informacion anterior
    } else {
       $("#drop-game").collapse('hide'); //cierra cualquier informacion anterior
    }
 
    // options info
-   visualizar(nameclass, "find-opt-cal", "#drop-cal", "show"); //open calendar
-   visualizar(nameclass, "find-opt-tea", "#drop-tea", "show"); //open calendar
-   visualizar(nameclass, "find-opt-loc", "#drop-loc", "show"); //open calendar
+   visualizarDoble(nameclass, "find-opt-cal", "#drop-cont", "show", "#drop-cal", "show"); //open calendar
+   visualizarDoble(nameclass, "find-opt-tea", "#drop-cont", "show", "#drop-tea", "show"); //open calendar
+   visualizarDoble(nameclass, "find-opt-loc", "#drop-cont", "show", "#drop-loc", "show"); //open calendar
+
 
    //calendar
 
@@ -136,7 +134,7 @@ $("button").click(function () {
 $("a").click(function () {
    let nameclass = this.className;
    console.log(nameclass);
-   $("#game").collapse('hide'); //cierra cualquier informacion anterior
+   $("#drop-game").collapse('hide'); //cierra cualquier informacion anterior
 
    // nav bar
    if (nameclass.includes("nav-item")) { //drop nav al seleccionar
@@ -217,7 +215,7 @@ function visualizar(clases, buscado, controlado, accion) {
    }
 }
 
-function visualizarDoble(clases, buscado, controlado, controlado2, accion, accion2) {
+function visualizarDoble(clases, buscado, controlado, accion, controlado2, accion2) {
    if (clases.includes(buscado)) {
       $(controlado).collapse(accion);
       $(controlado2).collapse(accion2);
