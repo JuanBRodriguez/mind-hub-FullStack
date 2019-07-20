@@ -1,87 +1,142 @@
 var orientacion = "";
+orientacion = window.screen.orientation.type;
+console.log(orientacion);
 
+if (orientacion == "landscape-primary") {
+   console.log("horizontal");
+} else {
+   console.log("vertical");
+}
 window.addEventListener("orientationchange", () => {
    console.log(window.screen.orientation);
-   orientacion = window.screen.orientation.type;
-
    if (orientacion == "landscape-primary") {
       console.log("horizontal");
-
    } else {
       console.log("vertical");
-
    }
 });
 
 $("button").click(function () {
    let nameclass = this.className;
    console.log(nameclass);
+   if (orientacion == "landscape-primary") {
+      $("#drop-game").collapse('show'); //cierra cualquier informacion anterior
+   } else {
+      $("#drop-game").collapse('hide'); //cierra cualquier informacion anterior
+   }
 
    // options info
-   Visualizar(nameclass, "find-opt-cal", "#drop-cal", "show"); //open calendar
-   Visualizar(nameclass, "find-opt-tea", "#drop-tea", "show"); //open calendar
-   Visualizar(nameclass, "find-opt-loc", "#drop-loc", "show"); //open calendar
+   visualizar(nameclass, "find-opt-cal", "#drop-cal", "show"); //open calendar
+   visualizar(nameclass, "find-opt-tea", "#drop-tea", "show"); //open calendar
+   visualizar(nameclass, "find-opt-loc", "#drop-loc", "show"); //open calendar
 
-   ///////////// calendar
+   //calendar
 
-   Visualizar(nameclass, "find-mes-sep", "#drop-sep", "toggle"); //open september
+   visualizar(nameclass, "find-mes-sep", "#drop-sep", "toggle"); //open september
    // fechas septiembre
-   Visualizar(nameclass, "find-fecha-901", "#drop-901", "toggle"); //open 901
-   Visualizar(nameclass, "find-fecha-908", "#drop-908", "toggle"); //open 908
-   Visualizar(nameclass, "find-fecha-915", "#drop-915", "toggle"); //open 915
-   Visualizar(nameclass, "find-fecha-922", "#drop-922", "toggle"); //open 922
-   Visualizar(nameclass, "find-fecha-929", "#drop-929", "toggle"); //open 929
+   visualizar(nameclass, "find-fecha-901", "#drop-901", "toggle"); //open 901
+   visualizar(nameclass, "find-fecha-908", "#drop-908", "toggle"); //open 908
+   visualizar(nameclass, "find-fecha-915", "#drop-915", "toggle"); //open 915
+   visualizar(nameclass, "find-fecha-922", "#drop-922", "toggle"); //open 922
+   visualizar(nameclass, "find-fecha-929", "#drop-929", "toggle"); //open 929
 
-   // 
-   Visualizar(nameclass, "find-mes-oct", "#drop-oct", "toggle"); //open october
+   visualizar(nameclass, "find-mes-oct", "#drop-oct", "toggle"); //open october
    // fechas octubre
-   Visualizar(nameclass, "find-fecha-1006", "#drop-1006", "toggle"); //open 10/06
-   Visualizar(nameclass, "find-fecha-1013", "#drop-1013", "toggle"); //open 10/13
-   Visualizar(nameclass, "find-fecha-1020", "#drop-1020", "toggle"); //open 10/20
-   Visualizar(nameclass, "find-fecha-1027", "#drop-1027", "toggle"); //open 10/27
+   visualizar(nameclass, "find-fecha-1006", "#drop-1006", "toggle"); //open 10/06
+   visualizar(nameclass, "find-fecha-1013", "#drop-1013", "toggle"); //open 10/13
+   visualizar(nameclass, "find-fecha-1020", "#drop-1020", "toggle"); //open 10/20
+   visualizar(nameclass, "find-fecha-1027", "#drop-1027", "toggle"); //open 10/27
 
-   // ///////////partidos
-   // septiembre
-   VisualizarDoble(nameclass, "find-part-914", "#drop-cal", "#drop-914", "hide", "show"); //open 9 u1 u4
-   VisualizarDoble(nameclass, "find-part-932", "#drop-cal", "#drop-932", "hide", "show"); //open 932
+   // Partidos
+   if (orientacion == "landscape-primary") {
+      // septiembre
+      visualizarGames(nameclass, "find-part-914", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-914", "show"); //open 9 u1 u4
+      visualizarGames(nameclass, "find-part-932", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-932", "show"); //open 932
 
-   VisualizarDoble(nameclass, "find-part-956", "#drop-cal", "#drop-956", "hide", "show"); //open 956
-   VisualizarDoble(nameclass, "find-part-961", "#drop-cal", "#drop-961", "hide", "show"); //open 961
+      visualizarGames(nameclass, "find-part-956", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-956", "show"); //open 956
+      visualizarGames(nameclass, "find-part-961", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-961", "show"); //open 961
 
-   VisualizarDoble(nameclass, "find-part-924", "#drop-cal", "#drop-924", "hide", "show"); //open 924
-   VisualizarDoble(nameclass, "find-part-935", "#drop-cal", "#drop-935", "hide", "show"); //open 935
+      visualizarGames(nameclass, "find-part-924", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-924", "show"); //open 924
+      visualizarGames(nameclass, "find-part-935", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-935", "show"); //open 935
 
-   VisualizarDoble(nameclass, "find-part-913", "#drop-cal", "#drop-913", "hide", "show"); //open 913
-   VisualizarDoble(nameclass, "find-part-926", "#drop-cal", "#drop-926", "hide", "show"); //open 926
+      visualizarGames(nameclass, "find-part-913", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-913", "show"); //open 913
+      visualizarGames(nameclass, "find-part-926", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-926", "show"); //open 926
 
-   VisualizarDoble(nameclass, "find-part-932", "#drop-cal", "#drop-932", "hide", "show"); //open 932
+      visualizarGames(nameclass, "find-part-945", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-932", "show"); //open 945
 
-   // octubre
-   VisualizarDoble(nameclass, "find-part-1025", "#drop-cal", "#drop-1025", "hide", "show"); //open 1025
-   VisualizarDoble(nameclass, "find-part-1016", "#drop-cal", "#drop-1016", "hide", "show"); //open 1016
+      // octubre
+      visualizarGames(nameclass, "find-part-1025", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-1025", "show"); //open 1025
+      visualizarGames(nameclass, "find-part-1016", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-1016", "show"); //open 1016
 
-   VisualizarDoble(nameclass, "find-part-1034", "#drop-cal", "#drop-1034", "hide", "show"); //open 1034
-   VisualizarDoble(nameclass, "find-part-1051", "#drop-cal", "#drop-1051", "hide", "show"); //open 1051
+      visualizarGames(nameclass, "find-part-1034", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-1034", "show"); //open 1034
+      visualizarGames(nameclass, "find-part-1051", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-1051", "show"); //open 1051
 
-   VisualizarDoble(nameclass, "find-part-1063", "#drop-cal", "#drop-1063", "hide", "show"); //open 1063
-   VisualizarDoble(nameclass, "find-part-1024", "#drop-cal", "#drop-1024", "hide", "show"); //open 1024
+      visualizarGames(nameclass, "find-part-1063", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-1063", "show"); //open 1063
+      visualizarGames(nameclass, "find-part-1024", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-1024", "show"); //open 1024
 
-   VisualizarDoble(nameclass, "find-part-1031", "#drop-cal", "#drop-1031", "hide", "show"); //open 1031
-   VisualizarDoble(nameclass, "find-part-1056", "#drop-cal", "#drop-1056", "hide", "show"); //open 1056
+      visualizarGames(nameclass, "find-part-1031", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-1031", "show"); //open 1031
+      visualizarGames(nameclass, "find-part-1056", "#drop-cont", "show", "#partidos", "show", "#drop-game", "show", "#drop-1056", "show"); //open 1056
+   } else {
+      // septiembre
+      visualizarGames(nameclass, "find-part-914", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-914", "show"); //open 9 u1 u4
+      visualizarGames(nameclass, "find-part-932", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-932", "show"); //open 932
 
+      visualizarGames(nameclass, "find-part-956", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-956", "show"); //open 956
+      visualizarGames(nameclass, "find-part-961", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-961", "show"); //open 961
 
+      visualizarGames(nameclass, "find-part-924", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-924", "show"); //open 924
+      visualizarGames(nameclass, "find-part-935", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-935", "show"); //open 935
 
+      visualizarGames(nameclass, "find-part-913", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-913", "show"); //open 913
+      visualizarGames(nameclass, "find-part-926", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-926", "show"); //open 926
 
+      visualizarGames(nameclass, "find-part-945", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-932", "show"); //open 945
 
-   // lanscape clone 
-   // if (nameclass.includes("fecha")) { //open locations
-   //    $(this).next(".collapse").appendTo("#inf-land");
-   // }
+      // octubre
+      visualizarGames(nameclass, "find-part-1025", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-1025", "show"); //open 1025
+      visualizarGames(nameclass, "find-part-1016", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-1016", "show"); //open 1016
+
+      visualizarGames(nameclass, "find-part-1034", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-1034", "show"); //open 1034
+      visualizarGames(nameclass, "find-part-1051", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-1051", "show"); //open 1051
+
+      visualizarGames(nameclass, "find-part-1063", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-1063", "show"); //open 1063
+      visualizarGames(nameclass, "find-part-1024", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-1024", "show"); //open 1024
+
+      visualizarGames(nameclass, "find-part-1031", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-1031", "show"); //open 1031
+      visualizarGames(nameclass, "find-part-1056", "#drop-cont", "hide", "#partidos", "show", "#drop-game", "show", "#drop-1056", "show"); //open 1056
+   }
+
+   // Localizaciones
+   if (orientacion == "landscape-primary") {
+      visualizarGames(nameclass, "find-loc-aj", "#drop-cont", "show", "#estadios", "show", "#drop-game", "show", "#drop-aj", "show"); //open aj
+      visualizarGames(nameclass, "find-loc-gre", "#drop-cont", "show", "#estadios", "show", "#drop-game", "show", "#drop-gre", "show"); //open gre
+      visualizarGames(nameclass, "find-loc-mar", "#drop-cont", "show", "#estadios", "show", "#drop-game", "show", "#drop-mar", "show"); //open mar
+      visualizarGames(nameclass, "find-loc-how", "#drop-cont", "show", "#estadios", "show", "#drop-game", "show", "#drop-how", "show"); //open how
+      visualizarGames(nameclass, "find-loc-nor", "#drop-cont", "show", "#estadios", "show", "#drop-game", "show", "#drop-nor", "show"); //open nor
+      visualizarGames(nameclass, "find-loc-sou", "#drop-cont", "show", "#estadios", "show", "#drop-game", "show", "#drop-sou", "show"); //open sou
+   } else {
+      visualizarGames(nameclass, "find-loc-aj", "#drop-cont", "hide", "#estadios", "show", "#drop-game", "show", "#drop-aj", "show"); //open aj
+      visualizarGames(nameclass, "find-loc-gre", "#drop-cont", "hide", "#estadios", "show", "#drop-game", "show", "#drop-gre", "show"); //open gre
+      visualizarGames(nameclass, "find-loc-mar", "#drop-cont", "hide", "#estadios", "show", "#drop-game", "show", "#drop-mar", "show"); //open mar
+      visualizarGames(nameclass, "find-loc-how", "#drop-cont", "hide", "#estadios", "show", "#drop-game", "show", "#drop-how", "show"); //open how
+      visualizarGames(nameclass, "find-loc-nor", "#drop-cont", "hide", "#estadios", "show", "#drop-game", "show", "#drop-nor", "show"); //open nor
+      visualizarGames(nameclass, "find-loc-sou", "#drop-cont", "hide", "#estadios", "show", "#drop-game", "show", "#drop-sou", "show"); //open sou
+   }
+
+   // teams
+   visualizar(nameclass, "find-team-u1", "#drop-u1", "toggle"); //open u1
+   visualizar(nameclass, "find-team-u2", "#drop-u2", "toggle"); //open u2
+   visualizar(nameclass, "find-team-u3", "#drop-u3", "toggle"); //open u3
+   visualizar(nameclass, "find-team-u4", "#drop-u4", "toggle"); //open u4
+   visualizar(nameclass, "find-team-u5", "#drop-u5", "toggle"); //open u5
+   visualizar(nameclass, "find-team-u6", "#drop-u6", "toggle"); //open u6
+
 });
 
 $("a").click(function () {
    let nameclass = this.className;
    console.log(nameclass);
+   $("#game").collapse('hide'); //cierra cualquier informacion anterior
 
    // nav bar
    if (nameclass.includes("nav-item")) { //drop nav al seleccionar
@@ -95,6 +150,7 @@ $("a").click(function () {
    }
    if (nameclass.includes("find-nav-inf")) { //open inf
       $("#drop-inf").collapse('show');
+      $("#drop-cont").collapse('show');
    }
    if (nameclass.includes("find-nav-rul")) { //open rul
       $("#drop-rul").collapse('show');
@@ -155,15 +211,31 @@ $("a").click(function () {
    }
 });
 
-function Visualizar(clases, buscado, controlado, accion) {
+function visualizar(clases, buscado, controlado, accion) {
    if (clases.includes(buscado)) {
       $(controlado).collapse(accion);
    }
 }
 
-function VisualizarDoble(clases, buscado, controlado, controlado2, accion, accion2) {
+function visualizarDoble(clases, buscado, controlado, controlado2, accion, accion2) {
    if (clases.includes(buscado)) {
       $(controlado).collapse(accion);
       $(controlado2).collapse(accion2);
+   }
+}
+
+function visualizarGames(clases, buscado, controlado, accion, controlado2, accion2, controlado3, accion3, controlado4, accion4) {
+   if (clases.includes(buscado)) {
+      $(controlado).collapse(accion);
+      $(controlado2).collapse(accion2);
+      $(controlado3).collapse(accion3);
+      $(controlado4).collapse(accion4);
+   }
+}
+function visualizarTriple(clases, buscado, controlado, accion, controlado2, accion2, controlado3, accion3) {
+   if (clases.includes(buscado)) {
+      $(controlado).collapse(accion);
+      $(controlado2).collapse(accion2);
+      $(controlado3).collapse(accion3);
    }
 }

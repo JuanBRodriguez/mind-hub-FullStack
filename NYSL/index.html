@@ -98,657 +98,475 @@
 
     <!-- Game Information -->
     <div class="collapse show" id="drop-inf" data-parent="#page">
+      <div class="row">
+        <div class="col-12 col-sm-5 collapse show" id="drop-cont">
+          <div class="d-flex justify-content-between ">
+            <!-- Calendar boton-->
+            <button class="btn btn-success find-opt-cal" aria-expanded="True">
+              <img src="img/calendario.svg" alt="icon Calendar" class="icon">Calendar
+            </button>
+            <!-- Teams boton -->
+            <button class="btn btn-success find-opt-tea">
+              <img src="img/escudo.svg" alt="icon teams">Teams
+            </button>
+            <!-- Game Location  boton-->
+            <button class="btn btn-success find-opt-loc">
+              <img src="img/campo-de-futbol.svg" alt="icon Location" class="icon"> Locations
+            </button>
+          </div>
+          <!-- title -->
+          <div class="text-center">
+            <h2><em>Game Information:</em></h2>
+          </div>
+          <h5 class="text-center"><em>Fall Schedule</em></h5>
 
-      <div class="d-flex justify-content-between ">
-        <!-- Calendar boton-->
-        <button class="btn btn-success find-opt-cal" aria-expanded="True">
-          <img src="img/calendario.svg" alt="icon Calendar" class="icon">Calendar
-        </button>
-        <!-- Teams boton -->
-        <button class="btn btn-success find-opt-tea">
-          <img src="img/escudo.svg" alt="icon teams">Teams
-        </button>
-        <!-- Game Location  boton-->
-        <button class="btn btn-success find-opt-loc">
-          <img src="img/campo-de-futbol.svg" alt="icon Location" class="icon"> Locations
-        </button>
-      </div>
-      <!-- title -->
-      <div class="text-center">
-        <h2><em>Game Information:</em></h2>
-      </div>
-      <h5 class="text-center"><em>Fall Schedule</em></h5>
+          <!--Contenido -->
+          <div class="text-justify container-fluid" id="items">
+            <!-- Calendar --------------------------- -->
+            <div class="collapse show" id="drop-cal" data-parent="#items">
+              <!-- SEPTEMBER -->
+              <button class="btn btn-success btn-block mb-2 find-mes-sep"> September
+              </button>
+              <div class=" collapse container-fluid" id="drop-sep" data-parent="#drop-cal">
+                <!-- 901 -->
+                <button class="btn btn-success btn-block mb-2 find-fecha-901"> 9/01</button>
+                <div class="collapse container-fluid" id="drop-901" data-parent="#drop-sep">
+                  <button class="btn btn-success btn-block mb-2 find-part-914"> U1 vs U4</button>
+                  <button class="btn btn-success btn-block mb-2 find-part-932"> U3 vs U2</button>
+                </div>
+                <!-- 908 -->
+                <button class="btn btn-success btn-block mb-2 find-fecha-908">9/08 </button>
+                <div class="collapse container-fluid" id="drop-908" data-parent="#drop-sep">
+                  <button class="btn btn-success btn-block mb-2 find-part-956"> U5 vs U6</button>
+                  <button class="btn btn-success btn-block mb-2 find-part-961"> U6 vs U1</button>
+                </div>
+                <!-- 915 -->
+                <button class="btn btn-success btn-block mb-2 find-fecha-915">9/15</button>
+                <div class="collapse container-fluid" id="drop-915" data-parent="#drop-sep">
+                  <button class="btn btn-success btn-block mb-2 find-part-924"> U2 vs U4</button>
+                  <button class="btn btn-success btn-block mb-2 find-part-935"> U3 vs U5</button>
+                </div>
+                <!-- 922 -->
+                <button class="btn btn-success btn-block mb-2 find-fecha-922">9/22 </button>
+                <div class="collapse container-fluid" id="drop-922" data-parent="#drop-sep">
+                  <button class="btn btn-success btn-block mb-2 find-part-913"> U1 vs U3</button>
+                  <button class="btn btn-success btn-block mb-2 find-part-926"> U2 vs U6</button>
+                </div>
+                <!-- 929 -->
+                <button class="btn btn-success btn-block mb-2 find-fecha-929"> 9/29</button>
+                <div class="collapse container-fluid" id="drop-929" data-parent="#drop-sep">
+                  <button class="btn btn-success btn-block mb-2 find-part-945"> U4 vs U5</button>
+                </div>
+              </div>
+              <!-- OCTOBER -->
+              <button class="btn btn-success btn-block mb-2 find-mes-oct">October </button>
+              <div class="collapse container-fluid" id="drop-oct" data-parent="#drop-cal">
+                <!-- 1006 -->
+                <button class="btn btn-success btn-block  mb-2 find-fecha-1006">10/06</button>
+                <div class="collapse container-fluid" id="drop-1006" data-parent="#drop-oct">
+                  <button class="btn btn-success btn-block mb-2 find-part-1025"> U2 vs U5</button>
+                  <button class="btn btn-success btn-block mb-2 find-part-1016"> U1 vs U6</button>
+                </div>
+                <!-- 1013 -->
+                <button class="btn btn-success btn-block  mb-2 find-fecha-1013">10/13</button>
+                <div class="collapse container-fluid" id="drop-1013" data-parent="#drop-oct">
+                  <button class="btn btn-success btn-block mb-2 find-part-1034"> U3 vs U4</button>
+                  <button class="btn btn-success btn-block mb-2 find-part-1051"> U5 vs U1</button>
+                </div>
+                <!-- 1020 -->
+                <button class="btn btn-success btn-block  mb-2 find-fecha-1020">10/20 </button>
+                <div class="collapse container-fluid" id="drop-1020" data-parent="#drop-oct">
+                  <button class="btn btn-success btn-block mb-2 find-part-1063"> U6 vs U3</button>
+                  <button class="btn btn-success btn-block mb-2 find-part-1024"> U2 vs U4</button>
+                </div>
+                <!-- 1027 -->
+                <button class="btn btn-success btn-block  mb-2 find-fecha-1027">10/27</button>
+                <div class="collapse container-fluid" id="drop-1027" data-parent="#drop-oct">
+                  <button class="btn btn-success btn-block mb-2 find-part-1031"> U3 vs U1</button>
+                  <button class="btn btn-success btn-block mb-2 find-part-1056"> U5 vs U6</button>
+                </div>
+              </div>
+            </div>
 
-      <!--Contenido  -->
-      <div class="text-justify container-fluid" id="items">
-        <!-- Calendar -->
-        <div class="collapse show" id="drop-cal" data-parent="#items">
-          <!-- SEPTEMBER -->
-          <button class="btn btn-success btn-block mb-2 find-mes-sep"> September
-          </button>
-          <div class=" collapse container-fluid" id="drop-sep" data-parent="#drop-cal">
+            <!-- Teams ----------------------------------------------- -->
+            <div class="collapse" id="drop-tea" data-parent="#items">
+              <!-- U1 -->
+              <button class="btn btn-success btn-block  mb-2 find-team-u1"> U1</button>
+              <div class="collapse text-center mb-2 container-fluid" id="drop-u1" data-parent="#drop-tea">
+                <!-- SEPTEMBER -->
+                <button class="btn btn-success btn-block mb-2 find-part-914"> U1 vs U4</button>
+                <button class="btn btn-success btn-block mb-2 find-part-961"> U6 vs U1</button>
+                <button class="btn btn-success btn-block mb-2 find-part-913"> U1 vs U3</button>
+                <!-- OCTOBER -->
+                <button class="btn btn-success btn-block mb-2 find-part-1016"> U1 vs U6</button>
+                <button class="btn btn-success btn-block mb-2 find-part-1051"> U5 vs U1</button>
+                <button class="btn btn-success btn-block mb-2 find-part-1031"> U3 vs U1</button>
+
+              </div>
+
+              <!-- U2 -->
+              <button class="btn btn-success btn-block  mb-2 find-team-u2">U2</button>
+              <div class="collapse  text-center mb-2 container-fluid" id="drop-u2" data-parent="#drop-tea">
+                <!-- SEPTEMBER -->
+                <button class="btn btn-success btn-block mb-2 find-part-932"> U3 vs U2</button>
+                <button class="btn btn-success btn-block mb-2 find-part-924"> U2 vs U4</button>
+                <button class="btn btn-success btn-block mb-2 find-part-926"> U2 vs U6</button>
+
+                <!-- OCTOBER -->
+                <button class="btn btn-success btn-block mb-2 find-part-1025"> U2 vs U5</button>
+                <button class="btn btn-success btn-block mb-2 find-part-1024"> U2 vs U4</button>
+              </div>
+
+              <!-- U3 -->
+              <button class="btn btn-success btn-block  mb-2 find-team-u3">U3</button>
+              <div class="collapse  text-center mb-2 container-fluid" id="drop-u3" data-parent="#drop-tea">
+                <!-- SEPTEMBER -->
+                <button class="btn btn-success btn-block mb-2 find-part-932"> U3 vs U2</button>
+                <button class="btn btn-success btn-block mb-2 find-part-935"> U3 vs U5</button>
+                <button class="btn btn-success btn-block mb-2 find-part-913"> U1 vs U3</button>
+                <!-- OCTOBER -->
+                <button class="btn btn-success btn-block mb-2 find-part-1034"> U3 vs U4</button>
+                <button class="btn btn-success btn-block mb-2 find-part-1063"> U6 vs U3</button>
+                <button class="btn btn-success btn-block mb-2 find-part-1031"> U3 vs U1</button>
+              </div>
+
+              <!-- U4 -->
+              <button class="btn btn-success btn-block  mb-2 find-team-u4">U4</button>
+              <div class="collapse  text-center mb-2 container-fluid" id="drop-u4" data-parent="#drop-tea">
+                <!-- SEPTEMBER -->
+                <button class="btn btn-success btn-block mb-2 find-part-914"> U1 vs U4</button>
+                <button class="btn btn-success btn-block mb-2 find-part-924"> U2 vs U4</button>
+                <button class="btn btn-success btn-block mb-2 find-part-945"> U4 vs U5</button>
+                <!-- OCTOBER -->
+                <button class="btn btn-success btn-block mb-2 find-part-1034"> U3 vs U4</button>
+                <button class="btn btn-success btn-block mb-2 find-part-1024"> U2 vs U4</button>
+              </div>
+
+              <!-- U5 -->
+              <button class="btn btn-success btn-block  mb-2 find-team-u5">U5</button>
+              <div class="collapse  text-center mb-2 container-fluid" id="drop-u5" data-parent="#drop-tea">
+                <!-- SEPTEMBER -->
+                <button class="btn btn-success btn-block mb-2 find-part-956"> U5 vs U6</button>
+                <button class="btn btn-success btn-block mb-2 find-part-935"> U3 vs U5</button>
+                <button class="btn btn-success btn-block mb-2 find-part-945"> U4 vs U5</button>
+                <!-- OCTOBER -->
+                <button class="btn btn-success btn-block mb-2 find-part-1025"> U2 vs U5</button>
+                <button class="btn btn-success btn-block mb-2 find-part-1051"> U5 vs U1</button>
+                <button class="btn btn-success btn-block mb-2 find-part-1056"> U5 vs U6</button>
+              </div>
+
+              <!-- U6 -->
+              <button class="btn btn-success btn-block  mb-2 find-team-u6">U6</button>
+              <div class="collapse  text-center mb-2 container-fluid" id="drop-u6" data-parent="#drop-tea">
+                <!-- SEPTEMBER -->
+                <button class="btn btn-success btn-block mb-2 find-part-956"> U5 vs U6</button>
+                <button class="btn btn-success btn-block mb-2 find-part-961"> U6 vs U1</button>
+                <button class="btn btn-success btn-block mb-2 find-part-926"> U2 vs U6</button>
+                <!-- OCTOBER -->
+                <button class="btn btn-success btn-block mb-2 find-part-1016"> U1 vs U6</button>
+                <button class="btn btn-success btn-block mb-2 find-part-1063"> U6 vs U3</button>
+                <button class="btn btn-success btn-block mb-2 find-part-1056"> U5 vs U6</button>
+
+              </div>
+
+            </div>
+
+            <!-- Game Location ---------------------------------- -->
+            <div class="collapse find-loc" id="drop-loc" data-parent="#items">
+              <!-- AJ Katzenmaier -->
+              <button class="btn btn-success btn-block  mb-2 find-loc-aj"> AJ Katzenmaier </button>
+              <!-- Greenbay -->
+              <button class="btn btn-success btn-block  mb-2 find-loc-gre">Greenbay</button>
+              <!-- Marjorie P Hart -->
+              <button class="btn btn-success btn-block  mb-2 find-loc-mar">Marjorie P Hart</button>
+              <!-- Howard A Yeager -->
+              <button class="btn btn-success btn-block  mb-2 find-loc-how">Howard A Yeager</button>
+              <!-- North -->
+              <button class="btn btn-success btn-block  mb-2 find-loc-nor">North</button>
+              <!-- South -->
+              <button class="btn btn-success btn-block  mb-2 find-loc-sou">South</button>
+            </div>
+          </div>
+        </div>
+        <!-- games -->
+        <div class="col-12 col-sm collapse" id="drop-game">
+          <!-- partidos -->
+          <div class="collapse" id="partidos" data-parent="#drop-game">
+            <!-- septiembre -->
             <!-- 901 -->
-            <button class="btn btn-success btn-block mb-2 find-fecha-901"> 9/01</button>
-            <div class="collapse container-fluid" id="drop-901" data-parent="#drop-sep">
-              <button class="btn btn-success btn-block mb-2 find-part-914"> U1 vs U4</button>
-              <button class="btn btn-success btn-block mb-2 find-part-932"> U3 vs U2</button>
+            <div class="collapse text-center btn-success" id="drop-914" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u4">U4</a></h4>
+              <p>9:30 a.m. in <a href="#" class="find-loc-aj">AJ Katzenmaier</a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1049.9364645725686!2d-87.62962318831157!3d41.89997994915088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553921561565!5m2!1sen!2sar">
+                </iframe>
+              </div>
             </div>
+            <div class="collapse text-center btn-success" id="drop-932" data-parent="#partidos">
+              <h5><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u2">U2</a></h5>
+              <p>1:00 p.m. in <a href="#" class="find-loc-gre">Greenbay</a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.025884368851!2d-87.64002798416092!3d41.913802279219496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921880555!5m2!1sen!2sar">
+                </iframe>
+              </div>
+            </div>
+
             <!-- 908 -->
-            <button class="btn btn-success btn-block mb-2 find-fecha-908">9/08 </button>
-            <div class="collapse container-fluid" id="drop-908" data-parent="#drop-sep">
-              <button class="btn btn-success btn-block mb-2 find-part-956"> U5 vs U6</button>
-              <button class="btn btn-success btn-block mb-2 find-part-961"> U6 vs U1</button>
+            <div class="collapse text-center btn-success" id="drop-956" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u5">U5</a> vs <a href="#" class="find-team-u6">U6</a></h4>
+              <p>9:30 a.m. in <a href="#" class="find-loc-how">Howard A Yeager</a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.58568308562!2d-87.66511458416065!3d41.92326457921862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921923003!5m2!1sen!2sar">
+                </iframe>
+              </div>
             </div>
+            <div class="collapse text-center btn-success" id="drop-961" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u6">U6</a> vs <a href="#" class="find-team-u1">U1</a></h4>
+              <p>1:00 p.m. in <a href="#" class="find-loc-mar">Marjorie P Hart</a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.2919146584213!2d-87.64808628416054!3d41.92957827921837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921967829!5m2!1sen!2sar">
+                </iframe>
+              </div>
+            </div>
+
             <!-- 915 -->
-            <button class="btn btn-success btn-block mb-2 find-fecha-915">9/15</button>
-            <div class="collapse container-fluid" id="drop-915" data-parent="#drop-sep">
-              <button class="btn btn-success btn-block mb-2 find-part-924"> U2 vs U4</button>
-              <button class="btn btn-success btn-block mb-2 find-part-935"> U3 vs U5</button>
+            <div class="collapse text-center btn-success" id="drop-924" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u4">U4</a></h4>
+              <p>9:30 a.m. in <a href="#" class="find-loc-nor">North</a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3377998492047!2d-87.64837698416109!3d41.907096479220044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af0e6ccc3%3A0x26c81c1d557667da!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553922003084!5m2!1sen!2sar">
+                </iframe>
+              </div>
             </div>
+            <div class="collapse text-center btn-success" id="drop-935" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u5">U5 </a></h4>
+              <p>1:00 p.m. in <a href="#" class="find-loc-aj">AJ Katzenmaier </a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1049.9364645725686!2d-87.62962318831157!3d41.89997994915088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553921561565!5m2!1sen!2sar">
+                </iframe>
+              </div>
+            </div>
+
             <!-- 922 -->
-            <button class="btn btn-success btn-block mb-2 find-fecha-922">9/22 </button>
-            <div class="collapse container-fluid" id="drop-922" data-parent="#drop-sep">
-              <button class="btn btn-success btn-block mb-2 find-part-913"> U1 vs U3</button>
-              <button class="btn btn-success btn-block mb-2 find-part-926"> U2 vs U6</button>
+            <div class="collapse text-center btn-success" id="drop-913" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u3">U3 </a></h4>
+              <p>9:30 a.m. in <a href="#" class="find-loc-sou">South </a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.74795052507!2d-87.6535553841608!3d41.91977677921884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553922034372!5m2!1sen!2sar">
+                </iframe>
+              </div>
             </div>
+            <div class="collapse text-center btn-success" id="drop-926" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u6">U6 </a></h4>
+              <p>1:00 p.m. in <a href="#" class="find-loc-how">Howard A Yeager </a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.58568308562!2d-87.66511458416065!3d41.92326457921862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921923003!5m2!1sen!2sar">
+                </iframe>
+              </div>
+            </div>
+
             <!-- 929 -->
-            <button class="btn btn-success btn-block mb-2 find-fecha-929"> 9/29</button>
-            <div class="collapse container-fluid" id="drop-929" data-parent="#drop-sep">
-              <button class="btn btn-success btn-block mb-2 find-part-945"> U4 vs U5</button>
+            <div class="collapse text-center btn-success" id="drop-945" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u4">U4</a> vs <a href="#" class="find-team-u5">U5 </a></h4>
+              <p>9:30 a.m. in <a href="#" class="find-loc-gre">Greenbay </a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.025884368851!2d-87.64002798416092!3d41.913802279219496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921880555!5m2!1sen!2sar">
+                </iframe>
+              </div>
             </div>
-          </div>
-          <!-- OCTOBER -->
-          <button class="btn btn-success btn-block mb-2 find-mes-oct">October </button>
-          <div class="collapse container-fluid" id="drop-oct" data-parent="#drop-cal">
+
+            <!-- octubre -->
+
             <!-- 1006 -->
-            <button class="btn btn-success btn-block  mb-2 find-fecha-1006">10/06</button>
-            <div class="collapse container-fluid" id="drop-1006" data-parent="#drop-oct">
-              <button class="btn btn-success btn-block mb-2 find-part-1025"> U2 vs U5</button>
-              <button class="btn btn-success btn-block mb-2 find-part-1016"> U1 vs U6</button>
+            <div class="collapse text-center btn-success" id="drop-1025" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u5">U5 </a></h4>
+              <p>9:30 a.m. in <a href="#" class="find-loc-mar">Marjorie P Hart </a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.2919146584213!2d-87.64808628416054!3d41.92957827921837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921967829!5m2!1sen!2sar">
+                </iframe>
+              </div>
             </div>
+            <div class="collapse text-center btn-success" id="drop-1016" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u6">U6 </a></h4>
+              <p>1:00 p.m. in <a href="#" class="find-loc-sou">South </a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.74795052507!2d-87.6535553841608!3d41.91977677921884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553922034372!5m2!1sen!2sar">
+                </iframe>
+              </div>
+            </div>
+
             <!-- 1013 -->
-            <button class="btn btn-success btn-block  mb-2 find-fecha-1013">10/13</button>
-            <div class="collapse container-fluid" id="drop-1013" data-parent="#drop-oct">
-              <button class="btn btn-success btn-block mb-2 find-part-1034"> U3 vs U4</button>
-              <button class="btn btn-success btn-block mb-2 find-part-1051"> U5 vs U1</button>
+            <div class="collapse text-center btn-success" id="drop-1034" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u4">U4 </a> </h4>
+              <p>9:30 a.m. in <a href="#" class="find-loc-how">Howard A Yeager </a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.58568308562!2d-87.66511458416065!3d41.92326457921862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921923003!5m2!1sen!2sar">
+                </iframe>
+              </div>
             </div>
+            <div class="collapse text-center btn-success" id="drop-1051" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u5">U5</a> vs <a href="#" class="find-team-u1">U1 </a></h4>
+              <p>1:00 p.m. in <a href="#" class="find-loc-gre">Greenbay </a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.025884368851!2d-87.64002798416092!3d41.913802279219496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921880555!5m2!1sen!2sar">
+                </iframe>
+              </div>
+            </div>
+
             <!-- 1020 -->
-            <button class="btn btn-success btn-block  mb-2 find-fecha-1020">10/20 </button>
-            <div class="collapse container-fluid" id="drop-1020" data-parent="#drop-oct">
-              <button class="btn btn-success btn-block mb-2 find-part-1063"> U6 vs U3</button>
-              <button class="btn btn-success btn-block mb-2 find-part-1024"> U2 vs U4</button>
+            <div class="collapse text-center btn-success" id="drop-1063" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u6">U6</a> vs <a href="#" class="find-team-u3">U3 </a></h4>
+              <p>9:30 a.m. in <a href="#" class="find-loc-nor">North </a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3377998492047!2d-87.64837698416109!3d41.907096479220044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af0e6ccc3%3A0x26c81c1d557667da!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553922003084!5m2!1sen!2sar">
+                </iframe>
+              </div>
             </div>
+            <div class="collapse text-center btn-success" id="drop-1024" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u4">U4 </a></h4>
+              <p>1:00 p.m. in <a href="#" class="find-loc-mar">Marjorie P Hart </a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.2919146584213!2d-87.64808628416054!3d41.92957827921837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921967829!5m2!1sen!2sar">
+                </iframe>
+              </div>
+            </div>
+
             <!-- 1027 -->
-            <button class="btn btn-success btn-block  mb-2 find-fecha-1027">10/27</button>
-            <div class="collapse container-fluid" id="drop-1027" data-parent="#drop-oct">
-              <button class="btn btn-success btn-block mb-2 find-part-1031"> U3 vs U1</button>
-              <button class="btn btn-success btn-block mb-2 find-part-1056"> U5 vs U6</button>
+            <div class="collapse text-center btn-success" id="drop-1031" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u1">U1 </a></h4>
+              <p>9:30 a.m. in <a href="#" class="find-loc-aj">AJ Katzenmaier </a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1049.9364645725686!2d-87.62962318831157!3d41.89997994915088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553921561565!5m2!1sen!2sar">
+                </iframe>
+              </div>
             </div>
-          </div>
-        </div>
-        <!-- Teams -->
-        <div class="collapse" id="drop-tea" data-parent="#items">
-          <!-- U1 -->
-          <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropu1"
-            aria-controls="dropu1" aria-expanded="false">U1
-          </button>
-          <div class="collapse " id="dropu1" data-parent="#drop-tea">
-            <table class="table-sm table-bordered">
-              <thead class="">
-                <tr>
-                  <th>Date </th>
-                  <th>Teams</th>
-                  <th>Location</th>
-                  <th>Times</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>9/01</td>
-                  <td><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u4">U4</a></td>
-                  <td><a href="#" class="find-loc-aj">AJ Katzenmaier</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <tr>
-                  <td>9/08</td>
-                  <td><a href="#" class="find-team-u6">U6</a> vs <a href="#" class="find-team-u1">U1</a></td>
-                  <td><a href="#" class="find-loc-mar">Marjorie P Hart</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-                <tr>
-                  <td>9/22</td>
-                  <td><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u3">U3</a></td>
-                  <td><a href="#" class="find-loc-sou">South</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <!-- october -->
-                <tr>
-                  <td>10/06</td>
-                  <td><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u6">U6</a></td>
-                  <td><a href="#" class="find-loc-sou">South</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-                <tr>
-                  <td>10/08</td>
-                  <td><a href="#" class="find-team-u5">U5</a> vs <a href="#" class="find-team-u1">U1</a></td>
-                  <td><a href="#" class="find-loc-gre">Greenbay</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-                <tr>
-                  <td>10/27</td>
-                  <td><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u1">U1</a></td>
-                  <td><a href="#" class="find-loc-aj">AJ Katzenmaier</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- U2 -->
-          <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropu2"
-            aria-controls="dropu2" aria-expanded="false">U2
-          </button>
-          <div class="collapse " id="dropu2" data-parent="#drop-tea">
-            <table class="table-sm table-bordered">
-              <thead class="">
-                <tr>
-                  <th>Date </th>
-                  <th>Teams</th>
-                  <th>Location</th>
-                  <th>Times</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>9/01</td>
-                  <td><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u2">U2</a></td>
-                  <td><a href="#" class="find-loc-gre">Greenbay</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-                <tr>
-                  <td>9/15</td>
-                  <td><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u4">U4</a></td>
-                  <td><a href="#" class="find-loc-nor">North</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <tr>
-                  <td>9/22</td>
-                  <td><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u6">U6</a></td>
-                  <td><a href="#" class="find-loc-how">Howard A Yeager</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-                <!-- october -->
-                <tr>
-                  <td>10/06</td>
-                  <td><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u5">U5</a></td>
-                  <td><a href="#" class="find-loc-mar">Marjorie P Hart</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <tr>
-                  <td>10/20</td>
-                  <td><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u4">U4</a></td>
-                  <td><a href="#" class="find-loc-mar">Marjorie P Hart</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- U3 -->
-          <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropu3"
-            aria-controls="dropu3" aria-expanded="false">U3
-          </button>
-          <div class="collapse " id="dropu3" data-parent="#drop-tea">
-            <table class="table-sm table-bordered">
-              <thead class="">
-                <tr>
-                  <th>Date </th>
-                  <th>Teams</th>
-                  <th>Location</th>
-                  <th>Times</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>9/01</td>
-                  <td><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u2">U2</a></td>
-                  <td><a href="#" class="find-loc-gre">Greenbay</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-                <tr>
-                  <td>9/15</td>
-                  <td><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u5">U5</a></td>
-                  <td><a href="#" class="find-loc-aj">AJ Katzenmaier</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-                <tr>
-                  <td>9/22</td>
-                  <td><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u3">U3</a></td>
-                  <td><a href="#" class="find-loc-sou">South</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <!-- october -->
-                <tr>
-                  <td>10/08</td>
-                  <td><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u4">U4</a></td>
-                  <td><a href="#" class="find-loc-how">Howard A Yeager</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <tr>
-                  <td>10/20</td>
-                  <td><a href="#" class="find-team-u6">U6</a> vs <a href="#" class="find-team-u3">U3</a></td>
-                  <td><a href="#" class="find-loc-nor">North</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <tr>
-                  <td>10/27</td>
-                  <td><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u1">U1</a></td>
-                  <td><a href="#" class="find-loc-aj">AJ Katzenmaier</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- U4 -->
-          <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropu4"
-            aria-controls="dropu4" aria-expanded="false">U4
-          </button>
-          <div class="collapse " id="dropu4" data-parent="#drop-tea">
-            <table class="table-sm table-bordered">
-              <thead class="">
-                <tr>
-                  <th>Date </th>
-                  <th>Teams</th>
-                  <th>Location</th>
-                  <th>Times</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>9/08</td>
-                  <td><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u4">U4</a></td>
-                  <td><a href="#" class="find-loc-aj">AJ Katzenmaier</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <tr>
-                  <td>9/15</td>
-                  <td><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u4">U4</a></td>
-                  <td><a href="#" class="find-loc-nor">North</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <tr>
-                  <td>9/29</td>
-                  <td><a href="#" class="find-team-u4">U4</a> vs <a href="#" class="find-team-u5">U5</a></td>
-                  <td><a href="#" class="find-loc-gre">Greenbay</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <!-- october -->
-                <tr>
-                  <td>10/08</td>
-                  <td><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u4">U4</a></td>
-                  <td><a href="#" class="find-loc-how">Howard A Yeager</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <tr>
-                  <td>10/20</td>
-                  <td><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u4">U4</a></td>
-                  <td><a href="#" class="find-loc-mar">Marjorie P Hart</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
-
-          <!-- U5 -->
-          <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropu5"
-            aria-controls="dropu5" aria-expanded="false">U5
-          </button>
-          <div class="collapse " id="dropu5" data-parent="#drop-tea">
-            <table class="table-sm table-bordered">
-              <thead class="">
-                <tr>
-                  <th>Date </th>
-                  <th>Teams</th>
-                  <th>Location</th>
-                  <th>Times</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>9/08</td>
-                  <td><a href="#" class="find-team-u5">U5</a> vs <a href="#" class="find-team-u6">U6</a></td>
-                  <td><a href="#" class="find-loc-how">Howard A Yeager</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <tr>
-                  <td>9/15</td>
-                  <td><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u5">U5</a></td>
-                  <td><a href="#" class="find-loc-aj">AJ Katzenmaier</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-                <tr>
-                  <td>9/29</td>
-                  <td><a href="#" class="find-team-u4">U4</a> vs <a href="#" class="find-team-u5">U5</a></td>
-                  <td><a href="#" class="find-loc-gre">Greenbay</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <!-- october -->
-                <tr>
-                  <td>10/06</td>
-                  <td><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u5">U5</a></td>
-                  <td><a href="#" class="find-loc-mar">Marjorie P Hart</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <tr>
-                  <td>10/08</td>
-                  <td><a href="#" class="find-team-u5">U5</a> vs <a href="#" class="find-team-u1">U1</a></td>
-                  <td><a href="#" class="find-loc-gre">Greenbay</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-                <tr>
-                  <td>10/27</td>
-                  <td><a href="#" class="find-team-u5">U5</a> vs <a href="#" class="find-team-u6">U6</a></td>
-                  <td><a href="#" class="find-loc-how">Howard A Yeager</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- U6 -->
-          <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropu6"
-            aria-controls="dropu6" aria-expanded="false">U6
-          </button>
-          <div class="collapse " id="dropu6" data-parent="#drop-tea">
-            <table class="table-sm table-bordered">
-              <thead class="">
-                <tr>
-                  <th>Date </th>
-                  <th>Teams</th>
-                  <th>Location</th>
-                  <th>Times</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td rowspan="2">9/08</td>
-                  <td><a href="#" class="find-team-u5">U5</a> vs <a href="#" class="find-team-u6">U6</a></td>
-                  <td><a href="#" class="find-loc-how">Howard A Yeager</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <tr>
-                  <td><a href="#" class="find-team-u6">U6</a> vs <a href="#" class="find-team-u1">U1</a></td>
-                  <td><a href="#" class="find-loc-mar">Marjorie P Hart</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-                <tr>
-                  <td>9/22</td>
-                  <td><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u6">U6</a></td>
-                  <td><a href="#" class="find-loc-how">Howard A Yeager</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-                <!-- october -->
-                <tr>
-                  <td>10/06</td>
-                  <td><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u6">U6</a></td>
-                  <td><a href="#" class="find-loc-sou">South</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-                <tr>
-                  <td>10/20</td>
-                  <td><a href="#" class="find-team-u6">U6</a> vs <a href="#" class="find-team-u3">U3</a></td>
-                  <td><a href="#" class="find-loc-nor">North</a></td>
-                  <td>9:30 a.m.</td>
-                </tr>
-                <tr>
-                  <td>10/27</td>
-                  <td><a href="#" class="find-team-u5">U5</a> vs <a href="#" class="find-team-u6">U6</a></td>
-                  <td><a href="#" class="find-loc-how">Howard A Yeager</a></td>
-                  <td>1:00 p.m.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <!-- Game Location -->
-        <div class="collapse find-loc" id="drop-loc" data-parent="#items">
-          <!-- AJ Katzenmaier -->
-          <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropaj"
-            aria-controls="dropaj" aria-expanded="false"> AJ Katzenmaier
-          </button>
-          <div class="collapse find-loc" id="dropaj" data-parent="#drop-loc">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1049.9364645725686!2d-87.62962318831157!3d41.89997994915088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553921561565!5m2!1sen!2sar">
-              </iframe>
-            </div> <br>
-            <a
-              href="https://www.google.com/maps/place/24+W+Walton+St,+Chicago,+IL+60610,+USA/@41.9002964,-87.6312391,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd34e07f6bac3:0x68a82e5d59952c86!8m2!3d41.9002924!4d-87.6290504?hl=en">
-              24 W. Walton St., Chicago, IL 60610</a>
-          </div>
-          <!-- Greenbay -->
-          <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropgre"
-            aria-controls="dropgre" aria-expanded="false">Greenbay
-          </button>
-          <div class="collapse find-loc" id="dropgre" data-parent="#drop-loc">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.025884368851!2d-87.64002798416092!3d41.913802279219496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921880555!5m2!1sen!2sar">
-              </iframe>
-            </div><br>
-            <a
-              href="https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+USA/@41.9138063,-87.640028,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138023!4d-87.6378393?hl=en">
-              1734 N. Orleans St., Chicago, IL 60614</a>
-          </div>
-
-          <!-- Marjorie P Hart -->
-          <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropmar"
-            aria-controls="dropmar" aria-expanded="false">Marjorie P Hart
-          </button>
-          <div class="collapse find-loc" id="dropmar" data-parent="#drop-loc">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.2919146584213!2d-87.64808628416054!3d41.92957827921837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921967829!5m2!1sen!2sar">
-              </iframe>
-            </div>
-            <br>
-            <a
-              href="https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+USA/@41.9295823,-87.6480863,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295783!4d-87.6458976?hl=en">
-              2625 N. Orchard St., Chicago, IL 60614</a>
-          </div>
-
-          <!-- Howard A Yeager -->
-          <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#drophow"
-            aria-controls="drophow" aria-expanded="false">Howard A Yeager
-          </button>
-          <div class="collapse find-loc" id="drophow" data-parent="#drop-loc">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.58568308562!2d-87.66511458416065!3d41.92326457921862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921923003!5m2!1sen!2sar">
-              </iframe>
-            </div> <br>
-            <a
-              href="https://www.google.com/maps/place/2245+N+Southport+Ave,+Chicago,+IL+60614,+USA/@41.9232686,-87.6651146,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd2e37f9b8d2d:0x62ad8b907dd755d6!8m2!3d41.9232646!4d-87.6629259?hl=en">
-              2245 N. Southport Ave., Chicago, IL 60614</a>
-          </div>
-
-          <!-- North -->
-          <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropnor"
-            aria-controls="dropnor" aria-expanded="false">North
-          </button>
-          <div class="collapse find-loc" id="dropnor" data-parent="#drop-loc">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3377998492047!2d-87.64837698416109!3d41.907096479220044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af0e6ccc3%3A0x26c81c1d557667da!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553922003084!5m2!1sen!2sar">
-              </iframe>
-            </div> <br>
-            <a
-              href="https://www.google.com/maps/place/1409+N+Ogden+Ave,+Chicago,+IL+60610,+USA/@41.9071005,-87.648377,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd33af0e6ccc3:0x26c81c1d557667da!8m2!3d41.9070965!4d-87.6461883?hl=en">
-              1409 N. Ogden Ave., Chicago, IL 60610</a>
-          </div>
-
-          <!-- South -->
-          <button class="btn btn-success btn-block  mb-2" type="button" data-toggle="collapse" data-target="#dropsou"
-            aria-controls="dropsou" aria-expanded="false">South
-          </button>
-          <div class="collapse find-loc" id="dropsou" data-parent="#drop-loc">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.74795052507!2d-87.6535553841608!3d41.91977677921884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553922034372!5m2!1sen!2sar">
-              </iframe>
+            <div class="collapse text-center btn-success" id="drop-1056" data-parent="#partidos">
+              <h4><a href="#" class="find-team-u5">U5</a> vs <a href="#" class="find-team-u6">U6 </a></h4>
+              <p>1:00 p.m. in <a href="#" class="find-loc-how">Howard A Yeager </a></p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.58568308562!2d-87.66511458416065!3d41.92326457921862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921923003!5m2!1sen!2sar">
+                </iframe>
+              </div>
             </div>
 
-            <br>
-            <a
-              href="https://www.google.com/maps/place/2101+N+Fremont+St,+Chicago,+IL+60614,+USA/@41.9197808,-87.6535554,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd3196fb41dc7:0x970be7f7d6336df5!8m2!3d41.9197768!4d-87.6513667?hl=en">
-              2101 N. Fremont St., Chicago, IL 60614</a>
           </div>
-        </div>
 
-        <!-- partidos -->
-        <div class="" id="partidos">
-          <!-- septiembre -->
-          <!-- 901 -->
-          <div class="collapse text-center bg-transparent border border-success" id="drop-914" data-parent="#partidos">
-            <h4><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u4">U4</a></h4>
-            <p>9:30 a.m. in <a href="#" class="find-loc-aj">AJ Katzenmaier</a></p>
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1049.9364645725686!2d-87.62962318831157!3d41.89997994915088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553921561565!5m2!1sen!2sar">
-              </iframe>
+          <!-- estadios -->
+          <div class="collapse" id="estadios" data-parent="#drop-game">
+            <!-- AJ Katzenmaier -->
+            <div class="collapse find-loc text-center" id="drop-aj" data-parent="#estadios">
+              <h4> AJ Katzenmaier</h4>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1049.9364645725686!2d-87.62962318831157!3d41.89997994915088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553921561565!5m2!1sen!2sar">
+                </iframe>
+              </div> <br>
+              <a
+                href="https://www.google.com/maps/place/24+W+Walton+St,+Chicago,+IL+60610,+USA/@41.9002964,-87.6312391,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd34e07f6bac3:0x68a82e5d59952c86!8m2!3d41.9002924!4d-87.6290504?hl=en">
+                24 W. Walton St., Chicago, IL 60610</a>
             </div>
-          </div>
-
-          <div class="collapse text-center bg-transparent border border-success" id="drop-932" data-parent="#partidos">
-            <h5><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u2">U2</a></h5>
-            <p>1:00 p.m. in <a href="#" class="find-loc-gre">Greenbay</a></p>
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.025884368851!2d-87.64002798416092!3d41.913802279219496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921880555!5m2!1sen!2sar">
-              </iframe>
+            <!-- Greenbay -->
+            <div class="collapse find-loc text-center" id="drop-gre" data-parent="#estadios">
+              <h4>Greenbay</h4>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.025884368851!2d-87.64002798416092!3d41.913802279219496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921880555!5m2!1sen!2sar">
+                </iframe>
+              </div>
+              <br>
+              <a
+                href="https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+USA/@41.9138063,-87.640028,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138023!4d-87.6378393?hl=en">
+                1734 N. Orleans St., Chicago, IL 60614</a>
             </div>
-          </div>
-
-          <!-- 908 -->
-          <div class="collapse " id="drop-908" data-parent="#drop-sep">
-
-                <td><a href="#" class="find-team-u5">U5</a> vs <a href="#" class="find-team-u6">U6</a></td>
-                <td><a href="#" class="find-loc-how">Howard A Yeager</a></td>
-                <td>9:30 a.m.</td>
-
-                <td><a href="#" class="find-team-u6">U6</a> vs <a href="#" class="find-team-u1">U1</a></td>
-                <td><a href="#" class="find-loc-mar">Marjorie P Hart</a></td>
-                <td>1:00 p.m.
-          </div>
-          <!-- 915 -->
-          <div class="collapse " id="drop-915" data-parent="#drop-sep">
-              <td><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u4">U4</a></td>
-              <td><a href="#" class="find-loc-nor">North</a></td>
-              <td>9:30 a.m.</td>
-
-                <td><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u5">U5</a></td>
-                <td><a href="#" class="find-loc-aj">AJ Katzenmaier</a></td>
-                <td>1:00 p.m.
-          </div>
-          <!-- 922 -->
-          <div class="collapse " id="drop-922" data-parent="#drop-sep">
-              <td><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u3">U3</a></td>
-              <td><a href="#" class="find-loc-sou">South</a></td>
-              <td>9:30 a.m.
-
-                <td><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u6">U6</a></td>
-                <td><a href="#" class="find-loc-how">Howard A Yeager</a></td>
-                <td>1:00 p.m.
-
-          </div>
-          <!-- 929 -->
-          <div class="collapse " id="drop-929" data-parent="#drop-sep">
-
-                <td><a href="#" class="find-team-u4">U4</a> vs <a href="#" class="find-team-u5">U5</a></td>
-                <td><a href="#" class="find-loc-gre">Greenbay</a></td>
-                <td>9:30 a.m.
-          </div>
-
-          <!-- octubre -->
-          <!-- 1006 -->
-          <div class="collapse " id="drop-1006" data-parent="#drop-oct">
-
-                <td><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u5">U5</a></td>
-                <td><a href="#" class="find-loc-mar">Marjorie P Hart</a></td>
-                <td>9:30 a.m.
-
-                <td><a href="#" class="find-team-u1">U1</a> vs <a href="#" class="find-team-u6">U6</a></td>
-                <td><a href="#" class="find-loc-sou">South</a></td>
-                <td>1:00 p.m.
-
-          </div>
-          <!-- 1013 -->
-          <div class="collapse" id="drop-1013" data-parent="#drop-oct">
-
-                <td><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u4">U4</a></td>
-                <td><a href="#" class="find-loc-how">Howard A Yeager</a></td>
-                <td>9:30 a.m.
-
-                <td><a href="#" class="find-team-u5">U5</a> vs <a href="#" class="find-team-u1">U1</a></td>
-                <td><a href="#" class="find-loc-gre">Greenbay</a></td>
-                <td>1:00 p.m.
+            <!-- Marjorie P Hart -->
+            <div class="collapse find-loc text-center" id="drop-mar" data-parent="#estadios">
+              <h4>Marjorie P Hart</h4>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.2919146584213!2d-87.64808628416054!3d41.92957827921837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921967829!5m2!1sen!2sar">
+                </iframe>
+              </div>
+              <br>
+              <a
+                href="https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+USA/@41.9295823,-87.6480863,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295783!4d-87.6458976?hl=en">
+                2625 N. Orchard St., Chicago, IL 60614</a>
+            </div>
+            <!-- Howard A Yeager -->
+            <div class="collapse find-loc text-center" id="drop-how" data-parent="#estadios">
+              <h4>Howard A Yeager</h4>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.58568308562!2d-87.66511458416065!3d41.92326457921862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553921923003!5m2!1sen!2sar">
+                </iframe>
+              </div>
+              <br>
+              <a
+                href="https://www.google.com/maps/place/2245+N+Southport+Ave,+Chicago,+IL+60614,+USA/@41.9232686,-87.6651146,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd2e37f9b8d2d:0x62ad8b907dd755d6!8m2!3d41.9232646!4d-87.6629259?hl=en">
+                2245 N. Southport Ave., Chicago, IL 60614</a>
+            </div>
+            <!-- North -->
+            <div class="collapse find-loc text-center" id="drop-nor" data-parent="#estadios">
+              <h4>North</h4>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3377998492047!2d-87.64837698416109!3d41.907096479220044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af0e6ccc3%3A0x26c81c1d557667da!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sar!4v1553922003084!5m2!1sen!2sar">
+                </iframe>
+              </div>
+              <br>
+              <a
+                href="https://www.google.com/maps/place/1409+N+Ogden+Ave,+Chicago,+IL+60610,+USA/@41.9071005,-87.648377,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd33af0e6ccc3:0x26c81c1d557667da!8m2!3d41.9070965!4d-87.6461883?hl=en">
+                1409 N. Ogden Ave., Chicago, IL 60610</a>
+            </div>
+            <!-- South -->
+            <div class="collapse find-loc text-center" id="drop-sou" data-parent="#estadios">
+              <h4>South</h4>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.74795052507!2d-87.6535553841608!3d41.91977677921884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sar!4v1553922034372!5m2!1sen!2sar">
+                </iframe>
+              </div>
+              <br>
+              <a
+                href="https://www.google.com/maps/place/2101+N+Fremont+St,+Chicago,+IL+60614,+USA/@41.9197808,-87.6535554,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd3196fb41dc7:0x970be7f7d6336df5!8m2!3d41.9197768!4d-87.6513667?hl=en">
+                2101 N. Fremont St., Chicago, IL 60614</a>
+            </div>
 
           </div>
-          <!-- 1020 -->
-          <div class="collapse " id="drop-1020" data-parent="#drop-oct">
-            <table class="table-sm">
-
-                <td><a href="#" class="find-team-u6">U6</a> vs <a href="#" class="find-team-u3">U3</a></td>
-                <td><a href="#" class="find-loc-nor">North</a></td>
-                <td>9:30 a.m.
-
-                <td><a href="#" class="find-team-u2">U2</a> vs <a href="#" class="find-team-u4">U4</a></td>
-                <td><a href="#" class="find-loc-mar">Marjorie P Hart</a></td>
-                <td>1:00 p.m.
-
-          </div>
-          <!-- 1027 -->
-          <div class="collapse " id="drop-1027" data-parent="#drop-oct">
-
-                <td><a href="#" class="find-team-u3">U3</a> vs <a href="#" class="find-team-u1">U1</a></td>
-                <td><a href="#" class="find-loc-aj">AJ Katzenmaier</a></td>
-                <td>9:30 a.m.
-
-                <td><a href="#" class="find-team-u5">U5</a> vs <a href="#" class="find-team-u6">U6</a></td>
-                <td><a href="#" class="find-loc-how">Howard A Yeager</a></td>
-                <td>1:00 p.m.
-          </div>
-        </div>
-        <!-- partidos por team -->
-        <div class="">
 
         </div>
-        <!-- estadios -->
-        <div class="">
-
-        </div>
-
-        <!-- informacion adicional -->
-        <div class="">
-          <p class="announcement"><br>*All games take place on Saturday</p>
-          <p><strong>Facility Type:</strong> Outdoor</p>
-          <p><strong>Additional Information:</strong> If deemed necessary by NYSL, games may be shortened or cancelled
-            due
-            to extreme weather conditions.</p>
-          <p><strong>Please direct all questions to:</strong> Michael Randall, League Coordinator</p>
-          <address>
-            <p><strong>Phone:</strong> (630) 690-8132</p>
-            <p><strong>Email:</strong> <a href="mailto:michael.randall@chisoccer.org">michael.randall@chisoccer.org</a>
-            </p>
-          </address>
-        </div>
+      </div>
+      <!-- informacion adicional -->
+      <div class="">
+        <p class="announcement"><br>*All games take place on Saturday</p>
+        <p><strong>Facility Type:</strong> Outdoor</p>
+        <p><strong>Additional Information:</strong> If deemed necessary by NYSL, games may be shortened or cancelled
+          due
+          to extreme weather conditions.</p>
+        <p><strong>Please direct all questions to:</strong> Michael Randall, League Coordinator</p>
+        <address>
+          <p><strong>Phone:</strong> (630) 690-8132</p>
+          <p><strong>Email:</strong> <a href="mailto:michael.randall@chisoccer.org">michael.randall@chisoccer.org</a>
+          </p>
+        </address>
 
       </div>
-
-
     </div>
 
     <!-- Rules -->
